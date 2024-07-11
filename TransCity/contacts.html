@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/main.min.css">
+    <title>Контакты</title>
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+		<div class="container">
+			<!-- Логотип -->
+			<div class="header-logo">
+				<a href="index.html"><img src="img/icn/logo-blue.svg" alt="ТрансСити"></a>
+			</div>
+			<!-- Меню -->
+			<div class="header-menu">
+				<ul>
+					<li><a href="about.html">О компании</a></li>
+					<li><a href="services.html">Услуги</a></li>
+					<li><a href="#calculator">Калькулятор</a></li>
+					<li><a href="contacts.html">Контакты</a></li>
+				</ul>
+			</div>
+			<!-- Кнопки -->
+			<div class="header-controls">
+				<a href="#" class="btn--blue feedback-call-btn">Обратный звонок</a>
+				<button class="header-burger--open burger-btn">
+				</button>
+			</div>
+			<div class="header-burger__content">
+				<div class="burger-menu">
+					<ul class="burger__content-list">
+						<li><a href="about.html" class="menu-elem">О компании</a></li>
+						<li><a href="services.html" class="menu-elem">Услуги</a></li>
+						<li><a href="#calculator" class="menu-elem">Калькулятор</a></li>
+						<li><a href="contacts.html" class="menu-elem">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+
+    <!-- Крошки -->
+    <div class="breadcrumb">
+        <ul class="container">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#" class="active">Контакты</a></li>
+        </ul>
+    </div>
+	<main>
+		<!-- Контакты -->
+		<div class="contacts section">
+			<div class="container">
+				<!-- Шапка -->
+				<div class="contacts-head section-title">
+					<h2 class="title">Контакты</h2>
+				</div>
+				<!-- Контент -->
+				<div class="contacts-content">
+					<!-- Контактный телефон -->
+					<div class="contacts-tel contacts-content__item">
+						<p class="info-label">Контактный телефон</p>
+						<ul>
+							<li><a href="tel:+7 (343) 123-23-23" class="info-text-b">+7 (343) 123-23-23</a></li>
+							<li><a href="tel:+7 (960) 220-60-99" class="info-text-b">+7 (960) 220-60-99</a></li>
+						</ul>
+					</div>
+					<!-- Почта и адрес -->
+					<div class="contacts-email_address contacts-content__item">
+						<!-- почта -->
+						<div class="contacts-email">
+							<p class="info-label">Электронная почта</p>
+							<a href="mailto:info@transciti.ru" class="info-text-b">info@transciti.ru</a>
+						</div>
+						<!-- адрес -->
+						<div class="contacts-address">
+							<p class="info-label">Адрес производства</p>
+							<p class="info-text-b">Екатеринбург, ул. Академика Сахарова, 9, оф. 318</p>
+						</div>
+					</div>
+					<!-- Режим работы и соц.сети -->
+					<div class="contacts-work_soc contacts-content__item">
+						<!-- Режим работы -->
+						<div class="contacts-work">
+							<p class="info-label">Режим работы</p>
+							<div class="contacts-work-items">
+								<p class="contacts-work-text">Будни: <span class="info-text-s">9:00 — 21:00 </span></p>
+								<p class="contacts-work-text">Выходные: <span class="info-text-s">11:00 — 19:00 </span></p>
+							</div>
+						</div>
+						<!-- Социальные сети -->
+						<div class="contacts-soc_media">
+							<a href="#" class="soc-media-link soc-media-fb"></a>
+							<a href="#" class="soc-media-link soc-media-yt"></a>
+							<a href="#" class="soc-media-link soc-media-vk"></a>
+							<a href="#" class="soc-media-link soc-media-inst"></a>
+						</div>
+					</div>
+				</div>
+				<!-- Карта -->
+				<div class="contacts-map">
+					<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6bd684a1ba7e869b5f9bb1abc91481e6484e7242c4499ec66921c06ca5556d85&amp;source=constructor" width="100%" height="402" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+		<!-- Расчет стоимости перевозки -->
+		<div class="calculator section" id="calculator">
+			<!-- Контент -->
+			<div class="container">
+				<!-- Шапка -->
+				<div class="calculator-title">
+					<h2 class="title">Рассчитать стоимость перевозки</h2>
+				</div>
+				<!-- Контент -->
+				<div class="calculator-content">
+					<div class="calculator-wrapper">
+						<!-- Блок с чекбоксами -->
+						<div class="calculator-head">
+							<!-- перевозка по городу -->
+							<label>
+								<input type="radio" name="deliveryType" id="cityDelivery" checked>
+								<span class="calculator-delivery-info">
+									<!-- Название -->
+									<span class="country-delivery-name">Перевозка по городу</span>
+								</span>
+							</label>
+							<!-- перевозка по россии -->
+							<label>
+								<input type="radio" name="deliveryType" id="countryDelivery">
+								<span class="calculator-delivery-info">
+									<!-- Название -->
+									<span class="country-delivery-name">Перевозка по России</span>
+								</span>
+							</label>
+						</div>
+						<!-- Блок с полями -->
+						<div class="calculator-elements">
+							<!-- Путь перевозки -->
+							<div class="calculator-elements__row">
+								<p class="text calculator-elements__row-label">Путь перевозки</p>
+								<div class="calculator-elements__row-inputs">
+									<input type="text" class="input calculator-input" placeholder="Пункт А" name="pointA">
+									<input type="text" class="input calculator-input" placeholder="Пункт Б" name="pointB">
+								</div>
+							</div>
+							<!-- Габариты груза -->
+							<div class="calculator-elements__row">
+								<p class="text calculator-elements__row-label">Габариты груза</p>
+								<div class="calculator-elements__row-inputs">
+									<input type="text" class="input calculator-input" placeholder="Длина" name="lenght">
+									<input type="text" class="input calculator-input" placeholder="Ширина" name="width">
+									<input type="text" class="input calculator-input" placeholder="Высота" name="height">
+									<input type="text" class="input calculator-input" placeholder="Вес" name="weight">
+								</div>
+							</div>
+							<!-- Ваши данные -->
+							<div class="calculator-elements__row">
+								<p class="text calculator-elements__row-label">Ваши данные</p>
+								<div class="calculator-elements__row-inputs">
+									<input type="text" class="input calculator-input" placeholder="Имя" name="name">
+									<input type="text" class="input calculator-input" placeholder="Телефон" name="tel-number">
+								</div>
+							</div>
+							<!-- Блок с кнопкой -->
+							<div class="calculator-elements__controls">
+								<a href="#" class="btn--orange calculator-btn">Расчитать стоимость</a>
+								<p class="text-light">Нажимая на эту кнопку, вы соглашаетесь с <a href="#" id="privacy-policy">политикой конфиденциальности</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Задний фон и т.д -->
+			<div class="calculator-bg">
+				<img src="img/delivery-cost-bg.jfif" alt="задний фон" class="calculator-bg__main">
+				<!-- <div class="calculator-bg__pictures"> -->
+					<img src="img/cloud.png" alt="облако" class="calculator-bg__cloud">
+					<img src="img/kamaz-2.png" alt="грузовик" class="calculator-bg__truck">
+				<!-- </div> -->
+				
+			</div>
+		</div>
+		<!-- Оставить заявку -->
+		<div class="submit section">
+			<div class="container">
+				<!-- Контент -->
+				<div class="submit-content">
+					<h3 class="title">Необходимо доставить груз? <br> Оставьте заявку!</h3>
+					<div class="submit-controls">
+						<input type="text" class="input" name="name" placeholder="Имя">
+						<input type="text" class="input" name="tel-number" placeholder="Телефон">
+						<a href="#" class="btn--orange send-submit-btn" id="send-submit">Оставить заявку</a>
+					</div>
+				</div>
+				<!-- Задний фон -->
+				<!-- Карта -->
+				<img src="img/russia-map-points.png" alt="карта" class="submit-map-bg">
+				<!-- Точки -->
+				<img src="img/map-points.png" alt="точки" class="submit-map-points">
+			</div>
+		</div>
+	</main>
+    
+    <!-- подвал -->
+	<footer>
+		<div class="container">
+			<!-- top -->
+			<div class="footer-top">
+				<!-- logo & privacy -->
+				<div class="footer-top__logo">
+					<a href="index.html">
+						<img src="img/icn/logo-white.svg" alt="Logo">
+					</a>
+					<div class="privacy-policy-wrapper">
+						<a href="#" id="user-terms">Пользовательское соглашение</a>
+						<a href="#" id="privacy-policy">Политика конфиденциальности</a>
+					</div>
+				</div>
+				<!-- menu -->
+				<div class="footer-top__menu">
+					<!-- Услуги -->
+					<div class="footer-menu-item">
+						<ul>
+							<li class="footer-menu-item__title">Услуги</li>
+							<li class="footer-menu-item__elems">
+								<ul>
+									<li><a href="#">Категория</a></li>
+									<li><a href="#">Категория</a></li>
+									<li><a href="#">Категория</a></li>
+									<li><a href="#">Категория</a></li>
+									<li><a href="#">Категория категории</a></li>
+									<li><a href="#">Категория категории</a></li>
+									<li><a href="#">Категория категории</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<!-- Навигация -->
+					<div class="footer-menu-item">
+						<ul>
+							<li class="footer-menu-item__title">Навигация</li>
+							<li class="footer-menu-item__elems">
+								<ul>
+									<li><a href="about.html">О компании</a></li>
+									<li><a href="#calculator">Калькулятор</a></li>
+									<li><a href="#">Статьи</a></li>
+									<li><a href="contacts.html">Контакты</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- contacts -->
+				<div class="footer-top__contacts">
+					<!-- info -->
+					<div class="footer-contacts__info">
+						<div class="footer-contacts__info-connect">
+							<a href="tel:+73431237465" class="info-icns links-phone">+7 (343) 123-74-65</a>
+							<a href="mailto:info@domen.ru" class="info-icns links-mail">info@domen.ru</a>
+						</div>
+						<div class="footer-contacts__info-place">
+							<span class="info-icns links-city">Екатеринбург</span>
+							<span class="info-icns links-time">Пн-пт, с 9:00 до 21:00</span>
+						</div>
+					</div>
+					<!-- btn & adress-->
+					<div class="footer-btn-address">
+						<a href="#" class="feedback-call-btn btn--gradient">Заказать обратный звонок</a>
+						<!-- address -->
+						<p class="footer-contacts__address">Россия, 621345, г. Екатеринбург, ул. Академика Сахарова, 9, оф. 318</p>
+					</div>
+					<!-- socs -->
+					<div class="footer-contacts__soc">
+						<a href="#" class="soc-media-link soc-media-fb"></a>
+						<a href="#" class="soc-media-link soc-media-yt"></a>
+						<a href="#" class="soc-media-link soc-media-vk"></a>
+						<a href="#" class="soc-media-link soc-media-inst"></a>
+					</div>
+				</div>
+			</div>
+			<!-- split -->
+			<div class="splitter"></div>
+			<!-- bottom -->
+			<div class="footer-bottom">
+				<div class="footer-bottom__left">
+					<p class="text--gray">Copyright 2022 - <span>название компании</span></p>
+				</div>
+				<div class="footer-bottom__right">
+					<p class="text--gray">Разработка сайтов <a href="https://haydex.ru" target="_blank">Digital-студия Haydex</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- модальные окна -->
+	<!-- стоимость перевозки -->
+	<div class="delivery-cost-modal">
+		<p class="text">Стоимость перевозки из точки А в точку Б составит:</p>
+		<p class="delivery-cost-modal__cost">
+			<span>20 500</span> рублей
+		</p>
+		<a href="#" class="btn--orange delivery-cost-modal__btn">Оставить заявку</a>
+	</div>
+	<!-- обратный звонок -->
+	<div class="feedback-call-modal">
+		<h2 class="text">Обратный звонок</h2>
+		<input type="text" class="input2" name="name" placeholder="Имя">
+		<input type="text" class="input2" name="tel-number" placeholder="Телефон">
+		<p class="text-light">Нажимая на эту кнопку, вы даёте согласие на <a href="#" id="user-terms">обработку своих персональных данных</a></p>
+		<a href="#" class="btn--orange feedback-call-modal__btn">Заказать обратный звонок</a>
+	</div>
+	<!-- Оставить заявку -->
+	<div class="send-submit-modal">
+		<h2 class="text">Заявка на перевозку груза</h2>
+		<input type="text" class="input2 send-submit-modal__input" name="name" placeholder="Имя">
+		<input type="text" class="input2 send-submit-modal__input" name="tel-number" placeholder="Телефон">
+		<p class="text-light">Нажимая на эту кнопку, вы даёте согласие на <a href="#" id="user-terms">обработку своих персональных данных</a></p>
+		<a href="#" class="btn--orange send-submit-modal__btn">Оставить заявку</a>
+	</div>	
+
+	<script src="libs/jquery/jquery.min.js"></script>
+	<script src="libs/jquery/plugins/mask/jquery.mask.min.js"></script>
+	<script src="libs/fancybox/fancybox.min.js"></script>
+	<script src="js/scripts.min.js"></script>
+</body>
+</html>
