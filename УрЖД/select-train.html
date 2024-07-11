@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/icn/Favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="libs/uikit/css/uikit.min.css">
+	<script src="libs/uikit/js/uikit.min.js"></script>
+	<link rel="stylesheet" href="libs/swiper/swiper.bundle.min.css">
+	<link rel="stylesheet" href="libs/fancybox/fancybox.css">
+	<link rel="stylesheet" href="css/main.min.css">
+    <title>Выбор поезда</title>
+</head>
+<body>
+    <!-- header -->
+	<header>
+		<div class="header">
+            <!-- burger btn -->
+            <button class="header-burger-btn--open"></button>
+			<div class="header_left">
+				<a href="index.html" class="header_left-logo">
+					<img src="img/icn/Logo-Short.png" alt="УрЖД логотип">
+				</a>
+				<div class="header_left-popular">
+					<button class="header_left_btn header_left-popular_btn">Популярные маршруты</button>
+					<div uk-dropdown="mode: click" class="header_left_menu header_left-popular-elements">
+						<ul class="menu-contaner">
+							<li><a href="#">Екатеринбург</a></li>
+							<li><a href="#">Челябинск</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="header_left-facts">
+					<button class="header_left_btn header_left-facts_btn">Факты о городах</button>
+					<div uk-dropdown="mode: click" class="header_left_menu header_left-facts-elements">
+						<ul class="menu-contaner">
+							<li><a href="#">Екатеринбург</a></li>
+							<li><a href="#">Тюмень</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="header_right">
+				<div class="header_right-contacts">
+					<a href="tel:+79999999999" class="header_right-contacts-links header_right-contacts-tel">+7(999)999-99-99</a>
+					<a href="mailto:ural-rails@ural.ru" class="header_right-contacts-links header_right-contacts-mail">ural-rails@ural.ru</a>
+				</div>
+				<div class="header_right-feedback">
+					<button class="header_feedback-btn feedback-modal--open">Заказать звонок</button>
+				</div>
+				<div class="header_right-profile">
+					<a href="javascript:;" class="header_profile-btn">
+						<img src="img/icn/defUser.png" alt="Фото Профиля">
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- modals -->
+		<div class="header-modals">
+			<!-- авторизация -->
+			<div class="autorize-modal">
+				<div class="wrapper">
+					<a href="login.html">Войти</a>
+					<div class="black-splitter"></div>
+					<a href="register.html">Регистрация</a>
+				</div>
+			</div>
+			<!-- feefback -->
+			<div class="feedback-modal">
+				<div class="wrapper">
+                    <form action="" id="feedback-form">
+					<!-- Шапка -->
+					<div class="feedback-modal__header">
+						<h5>Обратная связь</h5>
+						<button class="feedback-modal-close modal-close"></button>
+					</div>
+					<!-- Контент -->
+					<div class="feedback-modal__content">
+						<!-- Форма -->
+						<div class="feedback-modal__content-form">
+							<!-- name -->
+							<label for="fb-modal-name" class="text_input-label">
+								Ваше имя
+								<input type="text" id="fb-modal-name" name="name">
+							</label>
+							<!-- email -->
+							<label for="fb-modal-email" class="text_input-label">
+								E-mail
+								<input type="text" id="fb-modal-email" name="mail">
+							</label>
+							<!-- message -->
+							<textarea id="fb-modal-text" cols="30" rows="10" placeholder="Опишите суть вашего вопроса" class="text_input-label" name="message"></textarea>
+							<!-- conf -->
+							<label for="privacy" class="fb-modal-priv-check">
+								<input type="checkbox" id="privacy" name="privacy">
+								Я ознакомил(ся/ась) с 
+								<a href="javascript:;" class="privacy-policy-modal--open">политикой конфиденциальности</a>
+							</label>
+						</div>
+					</div>
+					<!-- Кнопка -->
+					<button class="feedback-modal__send actions-btn" disabled>Отправить</button>
+                    </form>
+				</div>
+			</div>
+            <!-- burger -->
+            <div class="burger-menu">
+                <div class="burger-menu__content">
+                    <button class="burger-menu--close"></button>
+                    <div class="burger-menu__inner">
+                        <!-- top -->
+                        <div class="burger-menu__inner-top">
+                            <a href="index.html" class="header_left-logo">
+                                <img src="img/icn/Logo-Short.png" alt="УрЖД логотип">
+                            </a>
+                            <!-- menu elements -->
+                            <div class="footer_menu_wrapper burger-menu__inner-menu">
+                                <ul uk-accordion="multiple: true">
+                                    <li class="uk-open uk-margin-remove">
+                                        <a class="uk-accordion-title" href="#">Услуги</a>
+                                        <div class="uk-accordion-content">
+                                            <ul>
+                                                <li><a href="#">Ж/д билеты</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="uk-margin-remove">
+                                        <a class="uk-accordion-title" href="#">Популярные <br> маршруты</a>
+                                        <div class="uk-accordion-content">
+                                            <ul>
+                                                <li><a href="#">Екатеринбург</a></li>
+                                                <li><a href="#">Челябинск</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="uk-margin-remove">
+                                        <a class="uk-accordion-title" href="#">Факты о <br> городах</a>
+                                        <div class="uk-accordion-content">
+                                            <ul>
+                                                <li><a href="#">Екатеринбург</a></li>
+                                                <li><a href="#">Челябинск</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- bottom -->
+                        <div class="burger-menu__inner-bottom">
+                            <div class="header_right-contacts">
+                                <a href="tel:+79999999999" class="header_right-contacts-links header_right-contacts-tel">+7(999)999-99-99</a>
+                                <a href="mailto:ural-rails@ural.ru" class="header_right-contacts-links header_right-contacts-mail">ural-rails@ural.ru</a>
+                            </div>
+                            <div class="header_right-feedback burger-menu-feedback">
+                                <button class="header_feedback-btn feedback-modal--open">Заказать звонок</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="burger-menu__fade"></div>
+            </div>
+		</div>
+		
+	</header>
+    <!-- mobile header -->
+    <header class="mobile-header">
+        <div class="mobile-header__container">
+            <button class="mobile-header__prev-page"></button>
+            <p class="mobile-header__page-title uk-margin-remove"></p>
+        </div>
+    </header>
+    <!-- content -->
+    <main class="select_train-container">
+        <!-- route info header -->
+        <header class="about_route-header">
+            <div class="container">
+                <p class="about_route-date">1 марта 2023</p>
+                <div class="about_route-info">
+                    <!-- a -->
+                    <div class="about_route_city-a about-route_city">
+                        <h2 class="about-city-a">Нижний Тагил</h2>
+                        <span class="about-city-a-vokz">Вокзал, Садовая ул., 19</span>
+                    </div>
+                    <!-- info -->
+                    <div class="about_route-text">
+                        <!-- Иконка -->
+                        <div class="about_route-picture">
+                            <img src="img/header-train-picture.png" alt="train picture">
+                        </div>
+                        <!-- время -->
+                        <p class="about_route-time">~01ч 54м</p>
+                        <!-- пассажиры -->
+                        <span class="about_route-pass">1 Взрослый</span>
+                    </div>
+                    <!-- b -->
+                    <div class="about-route_city-b about-route_city">
+                        <h2 class="about-city-b">Екатеринбург</h2>
+                        <span class="about-city-b-vokz">Вокзал, Вокзальная улица, 22</span>
+                    </div>
+                </div>
+            </div>
+            <!-- дата -->
+            
+        </header>
+        <!-- contenent -->
+        <div class="select_train-variants" uk-filter="target: .js-filter; animation: slide; duration: 450">
+            <div class="container">
+                <!-- filters block -->
+                <ul class="select_train-variants-filters">
+                    <li class="filters-item" uk-filter-control="sort: cost-sort">
+                        <a href="#">По возрастанию цены</a>
+                    </li>
+                    <li class="filters-item" uk-filter-control="sort: cost-sort; order: desc">
+                        <a href="#">По убыванию цены</a>
+                    </li>
+                    <li class="filters-item" uk-filter-control="sort: faster">
+                        <a href="#">Самый быстрый</a>
+                    </li>
+                    <button class="filters-items_show"></button>
+                </ul>
+                <!-- variants cards -->
+                <ul class="js-filter select_train-variants-cards">
+                    <!-- card -->
+                    <li class="variants-cards_item" cost-sort="2500" faster="150"> <!-- it has 'selected' class -->
+                        <!-- train info -->
+                        <div class="variants-cards_item_train-info">
+                            <span data-train-type="lastochka">S342 Скорый ("Ласточка")</span>
+                        </div>
+                        <div class="variants-cards_item_route-info">
+                            <!-- about route -->
+                            <div class="route-info_left">
+                                <!-- from -> to -->
+                                <div class="route-info_left-text">
+                                    <div class="route-info_left-text_away">
+                                        <p class="text_away-city">Н.Таг</p>
+                                        <p class="text_away-time">16:20</p>
+                                    </div>
+                                    <div class="route-info_left-text_time">
+                                        <p class="text_time-time">01ч 54м</p>
+                                    </div>
+                                    <div class="route-info_left-text_bway">
+                                        <p class="text_bway-city">Екат.</p>
+                                        <p class="text_bway-time">18:14</p>
+                                    </div>
+                                </div>
+                                <!-- add icons -->
+                                <div class="route-info_left-additions">
+                                    <span class="icn_wifi"></span>
+                                    <span class="icn_usb"></span>
+                                    <span class="icn_conditioner"></span>
+                                    <span class="icn_bio-wc"></span>
+                                </div>
+                            </div>
+                            <!-- cost and go to trains -->
+                            <div class="route-info_right">
+                                <p class="route-info_rigt-cost">₽ 2500</p>
+                                <a href="#" class="route-info_right-select-link">Выбрать вагон</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- card -->
+                    <li class="variants-cards_item" cost-sort="1500" faster="150"> <!-- it has 'selected' class -->
+                        <!-- train info -->
+                        <div class="variants-cards_item_train-info">
+                            <span data-train-type="lastochka">S342 Скорый ("Ласточка")</span>
+                        </div>
+                        <div class="variants-cards_item_route-info">
+                            <!-- about route -->
+                            <div class="route-info_left">
+                                <!-- from -> to -->
+                                <div class="route-info_left-text">
+                                    <div class="route-info_left-text_away">
+                                        <p class="text_away-city">Н.Таг</p>
+                                        <p class="text_away-time">16:20</p>
+                                    </div>
+                                    <div class="route-info_left-text_time">
+                                        <p class="text_time-time">01ч 54м</p>
+                                    </div>
+                                    <div class="route-info_left-text_bway">
+                                        <p class="text_bway-city">Екат.</p>
+                                        <p class="text_bway-time">18:14</p>
+                                    </div>
+                                </div>
+                                <!-- add icons -->
+                                <div class="route-info_left-additions">
+                                    <span class="icn_wifi"></span>
+                                    <span class="icn_usb"></span>
+                                    <span class="icn_conditioner"></span>
+                                    <span class="icn_bio-wc"></span>
+                                </div>
+                            </div>
+                            <!-- cost and go to trains -->
+                            <div class="route-info_right">
+                                <p class="route-info_rigt-cost">₽ 2500</p>
+                                <a href="#" class="route-info_right-select-link">Выбрать вагон</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- card -->
+                    <li class="variants-cards_item" cost-sort="3500" faster="150"> <!-- it has 'selected' class -->
+                        <!-- train info -->
+                        <div class="variants-cards_item_train-info">
+                            <span data-train-type="lastochka">S342 Скорый ("Ласточка")</span>
+                        </div>
+                        <div class="variants-cards_item_route-info">
+                            <!-- about route -->
+                            <div class="route-info_left">
+                                <!-- from -> to -->
+                                <div class="route-info_left-text">
+                                    <div class="route-info_left-text_away">
+                                        <p class="text_away-city">Н.Таг</p>
+                                        <p class="text_away-time">16:20</p>
+                                    </div>
+                                    <div class="route-info_left-text_time">
+                                        <p class="text_time-time">01ч 54м</p>
+                                    </div>
+                                    <div class="route-info_left-text_bway">
+                                        <p class="text_bway-city">Екат.</p>
+                                        <p class="text_bway-time">18:14</p>
+                                    </div>
+                                </div>
+                                <!-- add icons -->
+                                <div class="route-info_left-additions">
+                                    <span class="icn_wifi"></span>
+                                    <span class="icn_usb"></span>
+                                    <span class="icn_conditioner"></span>
+                                    <span class="icn_bio-wc"></span>
+                                </div>
+                            </div>
+                            <!-- cost and go to trains -->
+                            <div class="route-info_right">
+                                <p class="route-info_rigt-cost">₽ 2500</p>
+                                <a href="#" class="route-info_right-select-link">Выбрать вагон</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- card -->
+                    <li class="variants-cards_item" cost-sort="2500" faster="150"> <!-- it has 'selected' class -->
+                        <!-- train info -->
+                        <div class="variants-cards_item_train-info">
+                            <span data-train-type="lastochka">S342 Скорый ("Ласточка")</span>
+                        </div>
+                        <div class="variants-cards_item_route-info">
+                            <!-- about route -->
+                            <div class="route-info_left">
+                                <!-- from -> to -->
+                                <div class="route-info_left-text">
+                                    <div class="route-info_left-text_away">
+                                        <p class="text_away-city">Н.Таг</p>
+                                        <p class="text_away-time">16:20</p>
+                                    </div>
+                                    <div class="route-info_left-text_time">
+                                        <p class="text_time-time">01ч 54м</p>
+                                    </div>
+                                    <div class="route-info_left-text_bway">
+                                        <p class="text_bway-city">Екат.</p>
+                                        <p class="text_bway-time">18:14</p>
+                                    </div>
+                                </div>
+                                <!-- add icons -->
+                                <div class="route-info_left-additions">
+                                    <span class="icn_wifi"></span>
+                                    <span class="icn_usb"></span>
+                                    <span class="icn_conditioner"></span>
+                                    <span class="icn_bio-wc"></span>
+                                </div>
+                            </div>
+                            <!-- cost and go to trains -->
+                            <div class="route-info_right">
+                                <p class="route-info_rigt-cost">₽ 2500</p>
+                                <a href="#" class="route-info_right-select-link">Выбрать вагон</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- card -->
+                    <li class="variants-cards_item" cost-sort="1500" faster="150"> <!-- it has 'selected' class -->
+                        <!-- train info -->
+                        <div class="variants-cards_item_train-info">
+                            <span data-train-type="lastochka">S342 Скорый ("Ласточка")</span>
+                        </div>
+                        <div class="variants-cards_item_route-info">
+                            <!-- about route -->
+                            <div class="route-info_left">
+                                <!-- from -> to -->
+                                <div class="route-info_left-text">
+                                    <div class="route-info_left-text_away">
+                                        <p class="text_away-city">Н.Таг</p>
+                                        <p class="text_away-time">16:20</p>
+                                    </div>
+                                    <div class="route-info_left-text_time">
+                                        <p class="text_time-time">01ч 54м</p>
+                                    </div>
+                                    <div class="route-info_left-text_bway">
+                                        <p class="text_bway-city">Екат.</p>
+                                        <p class="text_bway-time">18:14</p>
+                                    </div>
+                                </div>
+                                <!-- add icons -->
+                                <div class="route-info_left-additions">
+                                    <span class="icn_wifi"></span>
+                                    <span class="icn_usb"></span>
+                                    <span class="icn_conditioner"></span>
+                                    <span class="icn_bio-wc"></span>
+                                </div>
+                            </div>
+                            <!-- cost and go to trains -->
+                            <div class="route-info_right">
+                                <p class="route-info_rigt-cost">₽ 2500</p>
+                                <a href="#" class="route-info_right-select-link">Выбрать вагон</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- card -->
+                    <li class="variants-cards_item" cost-sort="3500" faster="150"> <!-- it has 'selected' class -->
+                        <!-- train info -->
+                        <div class="variants-cards_item_train-info">
+                            <span data-train-type="lastochka">S342 Скорый ("Ласточка")</span>
+                        </div>
+                        <div class="variants-cards_item_route-info">
+                            <!-- about route -->
+                            <div class="route-info_left">
+                                <!-- from -> to -->
+                                <div class="route-info_left-text">
+                                    <div class="route-info_left-text_away">
+                                        <p class="text_away-city">Н.Таг</p>
+                                        <p class="text_away-time">16:20</p>
+                                    </div>
+                                    <div class="route-info_left-text_time">
+                                        <p class="text_time-time">01ч 54м</p>
+                                    </div>
+                                    <div class="route-info_left-text_bway">
+                                        <p class="text_bway-city">Екат.</p>
+                                        <p class="text_bway-time">18:14</p>
+                                    </div>
+                                </div>
+                                <!-- add icons -->
+                                <div class="route-info_left-additions">
+                                    <span class="icn_wifi"></span>
+                                    <span class="icn_usb"></span>
+                                    <span class="icn_conditioner"></span>
+                                    <span class="icn_bio-wc"></span>
+                                </div>
+                            </div>
+                            <!-- cost and go to trains -->
+                            <div class="route-info_right">
+                                <p class="route-info_rigt-cost">₽ 2500</p>
+                                <a href="#" class="route-info_right-select-link">Выбрать вагон</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        <!-- sides bg -->
+        <div class="select_train-side-bg__left">
+            <img src="img/bottom-left_color.png" alt="side bg left">
+        </div>
+        <div class="select_train-side-bg__right">
+            <img src="img/bottom-right_color.png" alt="side bg right">
+        </div>
+    </main>
+
+
+    <!-- modals -->
+    <div class="modals">
+        <!-- privacy policy -->
+        <div class="privacy-policy-modal__container">
+            <!-- header -->
+            <div class="privacy-policy-modal__header">
+                <h5>Политика конфиденциальности</h5>
+                <button class="modal-close"></button>
+            </div>
+            <!-- content -->
+            <div class="privacy-policy-modal__content">
+                <p>
+                    Я, субъект персональных данных, в соответствии с Федеральным законом от 27 июля 2006 года № 152 «О персональных данных» предоставляю ООО «Уральские Железные Дороги» (далее — «УрЖД»), зарегистрированному по адресу: 620078, г. Екатеринбург, Гагарина ул., 28к10, этаж 1, согласие на обработку персональных данных, указанных мной на страницах сайта www.ural_rails.ru (далее — «Сайт») в сети «Интернет», при заполнении веб-форм, характер информации которых предполагает или допускает включение в них следующих персональных данных:
+                </p>
+                <p>Фамилия, Имя, Отчество; Пол; Дата рождения; Реквизиты документы, удостоверяющего личность (вид документа, государство выдачи, серия и номер); Электронная почта; Номер телефона; Место работы;</p>
+                <p>
+                    Сведения о поездке, с целью Сопровождение и администрирование Сайта, продвижение услуг, хранение информации для повторных заказов, прохождение опроса и публикация отзывов на Сайте, сопровождение и администрирование информационных систем, проведения маркетинговых кампаний, в том числе электронных рассылок, создания сегментов данных, анализа данных.
+                </p>
+                <p>
+                    Согласие предоставляется на совершение следующих действий (операций) с указанными в настоящем согласии персональными данными: сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (доступ, предоставление), блокирование, удаление, уничтожение, осуществляемых с использованием средств автоматизации (автоматизированная обработка). Я подтверждаю, что ознакомлен с требованиями законодательства Российской Федерации, устанавливающими порядок обработки персональных данных, с политикой Оператора в отношении обработки персональных данных, а также с моими правами и обязанностями в этой области.
+                </p>
+                <p>
+                    Согласие вступает в силу с момента предоставления согласия и действует в течение 10 лет для цели: «Хранение информации для повторных заказов» и по достижении остальных целей обработки или случая утраты необходимости в достижении этих целей.
+                </p>
+                <p>
+                    Согласие может быть отозвано мною в любое время на основании моего письменного заявления.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- js -->
+	<script src="libs/jquery/jquery.min.js"></script>
+	<script src="libs/jquery/plugins/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="libs/swiper/swiper.bundle.min.js"></script>
+	<script src="libs/fancybox/fancybox.min.js"></script>
+	<script src="js/scripts.min.js"></script>
+</body>
+</html>

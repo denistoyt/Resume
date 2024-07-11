@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- favicon -->
+    <link rel="shortcut icon" href="img/icn/Favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="libs/uikit/css/uikit.min.css">
+	<script src="libs/uikit/js/uikit.min.js"></script>
+	<link rel="stylesheet" href="libs/swiper/swiper.bundle.min.css">
+	<link rel="stylesheet" href="libs/fancybox/fancybox.css">
+	<link rel="stylesheet" href="css/main.min.css">
+    <title>Профиль</title>
+</head>
+<body>
+    <!-- header -->
+	<header>
+		<div class="header profile-header">
+            <!-- burger btn -->
+            <button class="header-burger-btn--open"></button>
+			<div class="header_left">
+				<a href="index.html" class="header_left-logo">
+					<img src="img/icn/Logo-Short.png" alt="УрЖД логотип">
+				</a>
+				<div class="header_left-popular">
+					<button class="header_left_btn header_left-popular_btn">Популярные маршруты</button>
+					<div uk-dropdown="mode: click" class="header_left_menu header_left-popular-elements">
+						<ul class="menu-contaner">
+							<li><a href="#">Екатеринбург</a></li>
+							<li><a href="#">Челябинск</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="header_left-facts">
+					<button class="header_left_btn header_left-facts_btn">Факты о городах</button>
+					<div uk-dropdown="mode: click" class="header_left_menu header_left-facts-elements">
+						<ul class="menu-contaner">
+							<li><a href="#">Екатеринбург</a></li>
+							<li><a href="#">Тюмень</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="header_right">
+				<div class="header_right-contacts">
+					<a href="tel:+79999999999" class="header_right-contacts-links header_right-contacts-tel">+7(999)999-99-99</a>
+					<a href="mailto:ural-rails@ural.ru" class="header_right-contacts-links header_right-contacts-mail">ural-rails@ural.ru</a>
+				</div>
+				<div class="header_right-feedback">
+					<button class="header_feedback-btn feedback-modal--open">Заказать звонок</button>
+				</div>
+			</div>
+		</div>
+		<!-- modals -->
+		<div class="header-modals">
+			<!-- авторизация -->
+			<div class="autorize-modal">
+				<div class="wrapper">
+					<a href="login.html">Войти</a>
+					<div class="black-splitter"></div>
+					<a href="register.html">Регистрация</a>
+				</div>
+			</div>
+			<!-- feefback -->
+			<div class="feedback-modal">
+				<div class="wrapper">
+                    <form action="" id="feedback-form">
+					<!-- Шапка -->
+					<div class="feedback-modal__header">
+						<h5>Обратная связь</h5>
+						<button class="feedback-modal-close modal-close"></button>
+					</div>
+					<!-- Контент -->
+					<div class="feedback-modal__content">
+						<!-- Форма -->
+						<div class="feedback-modal__content-form">
+							<!-- name -->
+							<label for="fb-modal-name" class="text_input-label">
+								Ваше имя
+								<input type="text" id="fb-modal-name" name="name">
+							</label>
+							<!-- email -->
+							<label for="fb-modal-email" class="text_input-label">
+								E-mail
+								<input type="text" id="fb-modal-email" name="mail">
+							</label>
+							<!-- message -->
+							<textarea id="fb-modal-text" cols="30" rows="10" placeholder="Опишите суть вашего вопроса" class="text_input-label" name="message"></textarea>
+							<!-- conf -->
+							<label for="privacy" class="fb-modal-priv-check">
+								<input type="checkbox" id="privacy" name="privacy">
+								Я ознакомил(ся/ась) с 
+								<a href="javascript:;" class="privacy-policy-modal--open">политикой конфиденциальности</a>
+							</label>
+						</div>
+					</div>
+					<!-- Кнопка -->
+					<button class="feedback-modal__send actions-btn" disabled>Отправить</button>
+                    </form>
+				</div>
+			</div>
+            <!-- burger -->
+            <div class="burger-menu">
+                <div class="burger-menu__content">
+                    <button class="burger-menu--close"></button>
+                    <div class="burger-menu__inner">
+                        <!-- top -->
+                        <div class="burger-menu__inner-top">
+                            <a href="index.html" class="header_left-logo">
+                                <img src="img/icn/Logo-Short.png" alt="УрЖД логотип">
+                            </a>
+                            <!-- menu elements -->
+                            <div class="footer_menu_wrapper burger-menu__inner-menu">
+                                <ul uk-accordion="multiple: true">
+                                    <li class="uk-open uk-margin-remove">
+                                        <a class="uk-accordion-title" href="#">Услуги</a>
+                                        <div class="uk-accordion-content">
+                                            <ul>
+                                                <li><a href="#">Ж/д билеты</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="uk-margin-remove">
+                                        <a class="uk-accordion-title" href="#">Популярные <br> маршруты</a>
+                                        <div class="uk-accordion-content">
+                                            <ul>
+                                                <li><a href="#">Екатеринбург</a></li>
+                                                <li><a href="#">Челябинск</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="uk-margin-remove">
+                                        <a class="uk-accordion-title" href="#">Факты о <br> городах</a>
+                                        <div class="uk-accordion-content">
+                                            <ul>
+                                                <li><a href="#">Екатеринбург</a></li>
+                                                <li><a href="#">Челябинск</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- bottom -->
+                        <div class="burger-menu__inner-bottom">
+                            <div class="header_right-contacts">
+                                <a href="tel:+79999999999" class="header_right-contacts-links header_right-contacts-tel">+7(999)999-99-99</a>
+                                <a href="mailto:ural-rails@ural.ru" class="header_right-contacts-links header_right-contacts-mail">ural-rails@ural.ru</a>
+                            </div>
+                            <div class="header_right-feedback burger-menu-feedback">
+                                <button class="header_feedback-btn feedback-modal--open">Заказать звонок</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="burger-menu__fade"></div>
+            </div>
+		</div>
+		
+	</header>
+    <!-- mobile header -->
+    <header class="mobile-header">
+        <div class="mobile-header__container">
+            <button class="mobile-header__prev-page"></button>
+            <p class="mobile-header__page-title uk-margin-remove"></p>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main class="profile">
+        <div class="container">
+            <h1>Личные данные</h1>
+            <!-- личные данные -->
+            <div class="profile-personal-data">
+                <!-- Основная информаиия -->
+                <div class="profile-personal-data_main">
+                    <h2>Основная информация</h2>
+                    <div class="personal-data_main__content">
+                        <p class="profile-user-sfl icn-user">Ефимов Денис Эдуардович</p>
+                        <p class="profile-user-born icn-date">06.05.2003</p>
+                        <p class="profile-user-city icn-city">г. Нижний Тагил</p>
+                    </div>
+                </div>
+                <!-- Дополнительная информация -->
+                <div class="prifile-personal-data_add">
+                    <h2>Дополнительная информация</h2>
+                    <div class="personal-data_add__content">
+                        <p class="personal-user-tel icn-tel">+7 (950) 198-****</p>
+                        <p class="personal-user-email icn-mail">denistopl****@mail.ru</p>
+                        <p class="personal-user-passp icn-passp">6517-******</p>
+                    </div>
+                </div>
+            </div>
+            <!-- заказы -->
+            <div class="profile-orders">
+                <h3>Заказы</h3>
+                <div class="profile-orders__content">
+                    <!-- item -->
+                    <div class="orders__content-item" data-orderId="1">
+                        <div class="orders-item-route">
+                            <p class="order-route-a icn-place-w">Н.Таг</p>
+                            <span>—</span>
+                            <p class="order-route-b icn-place-w">Екат.</p>
+                        </div>
+                        <div class="orders-item-date">
+                            <p class="order-date">01.03.2023</p>
+                        </div>
+                        <button class="orders-item-info">Подробнее</button>
+                    </div>
+                    <!-- item -->
+                    <div class="orders__content-item" data-orderId="2">
+                        <div class="orders-item-route">
+                            <p class="order-route-a icn-place-w">Н.Таг</p>
+                            <span>—</span>
+                            <p class="order-route-b icn-place-w">Екат.</p>
+                        </div>
+                        <div class="orders-item-date">
+                            <p class="order-date">01.03.2023</p>
+                        </div>
+                        <button class="orders-item-info">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- modals -->
+    <div class="modals">
+        <!-- privacy policy -->
+        <div class="privacy-policy-modal__container">
+            <!-- header -->
+            <div class="privacy-policy-modal__header">
+                <h5>Политика конфиденциальности</h5>
+                <button class="modal-close"></button>
+            </div>
+            <!-- content -->
+            <div class="privacy-policy-modal__content">
+                <p>
+                    Я, субъект персональных данных, в соответствии с Федеральным законом от 27 июля 2006 года № 152 «О персональных данных» предоставляю ООО «Уральские Железные Дороги» (далее — «УрЖД»), зарегистрированному по адресу: 620078, г. Екатеринбург, Гагарина ул., 28к10, этаж 1, согласие на обработку персональных данных, указанных мной на страницах сайта www.ural_rails.ru (далее — «Сайт») в сети «Интернет», при заполнении веб-форм, характер информации которых предполагает или допускает включение в них следующих персональных данных:
+                </p>
+                <p>Фамилия, Имя, Отчество; Пол; Дата рождения; Реквизиты документы, удостоверяющего личность (вид документа, государство выдачи, серия и номер); Электронная почта; Номер телефона; Место работы;</p>
+                <p>
+                    Сведения о поездке, с целью Сопровождение и администрирование Сайта, продвижение услуг, хранение информации для повторных заказов, прохождение опроса и публикация отзывов на Сайте, сопровождение и администрирование информационных систем, проведения маркетинговых кампаний, в том числе электронных рассылок, создания сегментов данных, анализа данных.
+                </p>
+                <p>
+                    Согласие предоставляется на совершение следующих действий (операций) с указанными в настоящем согласии персональными данными: сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (доступ, предоставление), блокирование, удаление, уничтожение, осуществляемых с использованием средств автоматизации (автоматизированная обработка). Я подтверждаю, что ознакомлен с требованиями законодательства Российской Федерации, устанавливающими порядок обработки персональных данных, с политикой Оператора в отношении обработки персональных данных, а также с моими правами и обязанностями в этой области.
+                </p>
+                <p>
+                    Согласие вступает в силу с момента предоставления согласия и действует в течение 10 лет для цели: «Хранение информации для повторных заказов» и по достижении остальных целей обработки или случая утраты необходимости в достижении этих целей.
+                </p>
+                <p>
+                    Согласие может быть отозвано мною в любое время на основании моего письменного заявления.
+                </p>
+            </div>
+        </div>
+        <!-- profile order -->
+        <div class="profile-order-modal__container" style="display: none;">
+            <div class="profile-order-modal__header">
+                <button class="modal-close"></button>
+            </div>
+            <!-- top -->
+            <div class="profile-order-modal__content-top">
+                <p class="profile-order-modal-date">
+                    Поездка от <span>01.03.2023</span>
+                </p>
+                <div class="profile-order-modal-route_time">
+                    <!-- маршруты -->
+                    <div class="order-modal-route__container">
+                        <div class="order-modal-route-a">
+                            <p>Откуда:</p>
+                            <span class="order-modal-a_way">Нижний Тагил</span>
+                        </div>
+                        <div class="order-modal-route-b">
+                            <p>Куда:</p>
+                            <span class="order-modal-b_way">Екатеринбург</span>
+                        </div>
+                    </div>
+                    <!-- время -->
+                    <div class="order-modal-time__container">
+                        <div class="order-modal-time-a">
+                            <p>Отправление:</p>
+                            <span class="order-modal-a_time">16:20</span>
+                        </div>
+                        <div class="order-modal-time-b">
+                            <p>Прибытие:</p>
+                            <div class="order-modal-b_time">18:14</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- splitter -->
+            <div class="route-modal__splitter"></div>
+            <!-- bottom -->
+            <div class="profile-order-modal__content-bottom">
+                <!-- train, vag -->
+                <div class="profile-order-modal_train-vag">
+                    <!-- поезд -->
+                    <div class="order-modal-train">
+                        <p>Поезд:</p>
+                        <span class="order-modal-train_text">S342 <br>Скорый ("Ласточка")</span>
+                    </div>
+                    <!-- Вагон -->
+                    <div class="order-modal-vagon">
+                        <p>Вагон:</p>
+                        <span class="order-modal-vagon_text">
+                            1
+                        </span>
+                    </div>
+                </div>
+                <!-- place -->
+                <div class="profile-order-modal_place">
+                    <p>Место:</p>
+                    <span class="order-modal-place_text">40</span>
+                </div>
+            </div>
+            <!-- print -->
+            <button class="order-modal-print_btn">Распечатать</button>
+        </div>
+    </div>
+
+    <footer class="mobile-bottom-filed__footer">
+        <a href="index.html" class="mobile-bottom-home"></a>
+    </footer>
+    <!-- js -->
+	<script src="libs/jquery/jquery.min.js"></script>
+	<script src="libs/jquery/plugins/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    <script type='module' src="libs/jquery/plugins/mask/jquery.inputmask.min.js"></script>
+	<script src="libs/swiper/swiper.bundle.min.js"></script>
+	<script src="libs/fancybox/fancybox.min.js"></script>
+	<script src="js/scripts.min.js"></script>
+</body>
+</html>

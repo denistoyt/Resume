@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/icn/Favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="libs/uikit/css/uikit.min.css">
+	<script src="libs/uikit/js/uikit.min.js"></script>
+	<link rel="stylesheet" href="libs/swiper/swiper.bundle.min.css">
+	<link rel="stylesheet" href="libs/fancybox/fancybox.css">
+	<link rel="stylesheet" href="css/main.min.css">
+    <title>Получение билета</title>
+</head>
+<body>
+    <!-- header -->
+	<header>
+		<div class="header">
+            <!-- burger btn -->
+            <button class="header-burger-btn--open"></button>
+			<div class="header_left">
+				<a href="index.html" class="header_left-logo">
+					<img src="img/icn/Logo-Short.png" alt="УрЖД логотип">
+				</a>
+				<div class="header_left-popular">
+					<button class="header_left_btn header_left-popular_btn">Популярные маршруты</button>
+					<div uk-dropdown="mode: click" class="header_left_menu header_left-popular-elements">
+						<ul class="menu-contaner">
+							<li><a href="#">Екатеринбург</a></li>
+							<li><a href="#">Челябинск</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="header_left-facts">
+					<button class="header_left_btn header_left-facts_btn">Факты о городах</button>
+					<div uk-dropdown="mode: click" class="header_left_menu header_left-facts-elements">
+						<ul class="menu-contaner">
+							<li><a href="#">Екатеринбург</a></li>
+							<li><a href="#">Тюмень</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="header_right">
+				<div class="header_right-contacts">
+					<a href="tel:+79999999999" class="header_right-contacts-links header_right-contacts-tel">+7(999)999-99-99</a>
+					<a href="mailto:ural-rails@ural.ru" class="header_right-contacts-links header_right-contacts-mail">ural-rails@ural.ru</a>
+				</div>
+				<div class="header_right-feedback">
+					<button class="header_feedback-btn feedback-modal--open">Заказать звонок</button>
+				</div>
+				<div class="header_right-profile">
+					<a href="javascript:;" class="header_profile-btn">
+						<img src="img/icn/defUser.png" alt="Фото Профиля">
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- modals -->
+		<div class="header-modals">
+			<!-- авторизация -->
+			<div class="autorize-modal">
+				<div class="wrapper">
+					<a href="login.html">Войти</a>
+					<div class="black-splitter"></div>
+					<a href="register.html">Регистрация</a>
+				</div>
+			</div>
+			<!-- feefback -->
+			<div class="feedback-modal">
+				<div class="wrapper">
+                    <form action="" id="feedback-form">
+					<!-- Шапка -->
+					<div class="feedback-modal__header">
+						<h5>Обратная связь</h5>
+						<button class="feedback-modal-close modal-close"></button>
+					</div>
+					<!-- Контент -->
+					<div class="feedback-modal__content">
+						<!-- Форма -->
+						<div class="feedback-modal__content-form">
+							<!-- name -->
+							<label for="fb-modal-name" class="text_input-label">
+								Ваше имя
+								<input type="text" id="fb-modal-name" name="name">
+							</label>
+							<!-- email -->
+							<label for="fb-modal-email" class="text_input-label">
+								E-mail
+								<input type="text" id="fb-modal-email" name="mail">
+							</label>
+							<!-- message -->
+							<textarea id="fb-modal-text" cols="30" rows="10" placeholder="Опишите суть вашего вопроса" class="text_input-label" name="message"></textarea>
+							<!-- conf -->
+							<label for="privacy" class="fb-modal-priv-check">
+								<input type="checkbox" id="privacy" name="privacy">
+								Я ознакомил(ся/ась) с 
+								<a href="javascript:;" class="privacy-policy-modal--open">политикой конфиденциальности</a>
+							</label>
+						</div>
+					</div>
+					<!-- Кнопка -->
+					<button class="feedback-modal__send actions-btn" disabled>Отправить</button>
+                    </form>
+				</div>
+			</div>
+            <!-- burger -->
+            <div class="burger-menu">
+                <div class="burger-menu__content">
+                    <button class="burger-menu--close"></button>
+                    <div class="burger-menu__inner">
+                        <!-- top -->
+                        <div class="burger-menu__inner-top">
+                            <a href="index.html" class="header_left-logo">
+                                <img src="img/icn/Logo-Short.png" alt="УрЖД логотип">
+                            </a>
+                            <!-- menu elements -->
+                            <div class="footer_menu_wrapper burger-menu__inner-menu">
+                                <ul uk-accordion="multiple: true">
+                                    <li class="uk-open uk-margin-remove">
+                                        <a class="uk-accordion-title" href="#">Услуги</a>
+                                        <div class="uk-accordion-content">
+                                            <ul>
+                                                <li><a href="#">Ж/д билеты</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="uk-margin-remove">
+                                        <a class="uk-accordion-title" href="#">Популярные <br> маршруты</a>
+                                        <div class="uk-accordion-content">
+                                            <ul>
+                                                <li><a href="#">Екатеринбург</a></li>
+                                                <li><a href="#">Челябинск</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="uk-margin-remove">
+                                        <a class="uk-accordion-title" href="#">Факты о <br> городах</a>
+                                        <div class="uk-accordion-content">
+                                            <ul>
+                                                <li><a href="#">Екатеринбург</a></li>
+                                                <li><a href="#">Челябинск</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- bottom -->
+                        <div class="burger-menu__inner-bottom">
+                            <div class="header_right-contacts">
+                                <a href="tel:+79999999999" class="header_right-contacts-links header_right-contacts-tel">+7(999)999-99-99</a>
+                                <a href="mailto:ural-rails@ural.ru" class="header_right-contacts-links header_right-contacts-mail">ural-rails@ural.ru</a>
+                            </div>
+                            <div class="header_right-feedback burger-menu-feedback">
+                                <button class="header_feedback-btn feedback-modal--open">Заказать звонок</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="burger-menu__fade"></div>
+            </div>
+		</div>
+		
+	</header>
+    <!-- mobile header -->
+    <header class="mobile-header">
+        <div class="mobile-header__container">
+            <button class="mobile-header__prev-page"></button>
+            <p class="mobile-header__page-title uk-margin-remove"></p>
+        </div>
+    </header>
+
+
+
+    <!-- main -->
+    <main class="ticket-apply">
+        <!-- route info header -->
+        <header class="enter-passengers_about-route">
+            <div class="container">
+                <p class="enter-passengers_header-title">Получение билета</p>
+            </div>
+        </header>
+        <!-- ticket card -->
+        <div class="ticket-apply__content">
+            <div class="container">
+                <!-- card -->
+                <div class="ticket-apply__card">
+                    <div class="ticket-apply__card-route_info">
+                        <!-- route info -->
+                        <div class="card-route_info-container">
+                            <!-- date -->
+                            <p class="card-route_info__date">1 Марта 2023</p>
+                            <!-- info -->
+                            <div class="card-route_info__routes">
+                                <!-- a way -->
+                                <div class="info__routes-a_way">
+                                    <p class="routes-a_way__city">
+                                        Н.Таг
+                                    </p>
+                                    <div class="routes-a_way__vokzal">
+                                        Вокзал, Садовая ул., 19
+                                    </div>
+                                </div>
+                                <!-- time -->
+                                <div class="info__routes-time">
+                                    <!-- Иконка -->
+                                    <div class="about_route-picture">
+                                        <img src="img/header-train-picture_2.png" alt="train picture">
+                                    </div>
+                                    <!-- время -->
+                                    <p class="about_route-time">01ч 54м</p>
+                                </div>
+                                <!-- b way -->
+                                <div class="info__routes-b_way">
+                                    <p class="routes-b_way__city">
+                                        Екат.
+                                    </p>
+                                    <div class="routes-b_way__vokzal">
+                                        Вокзал, Вокзальная <br> улица, 22
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- icns -->
+                            <div class="card-route_info__adds">
+                                <span class="info__adds-passengers icn_passenger">1 Взрослый</span>
+                                <span class="icn_wifi"></span>
+                                <span class="icn_usb"></span>
+                                <span class="icn_conditioner"></span>
+                                <span class="icn_bio-wc"></span>
+                            </div>
+                        </div>
+                        <!-- passenger info -->
+                        <div class="card-passenger_info-container">
+                            <!-- ФИО -->
+                            <div class="card-passenger_info__sfl">
+                                <p class="passenger_info__titles">Пассажир</p>
+                                <p class="passenger_info__sfl-text passenger_info__texts">Ефимов Денис Эдуардович</p>
+                            </div>
+                            <!-- Данные -->
+                            <div class="card-passenger_info__data">
+                                <!-- Паспорт -->
+                                <div class="passenger_info__data-passp">
+                                    <p class="passenger_info__titles">Паспортные данные</p>
+                                    <p class="passenger_info__data-passp_text passenger_info__texts">6517-******</p>
+                                </div>
+                                <!-- Тип Вагона -->
+                                <div class="passenger_info__data-route">
+                                    <p class="passenger_info__titles">Тип вагона</p>
+                                    <p class="passenger_info__data-route_text passenger_info__texts">Скорый ("Ласточка")</p>
+                                </div>
+                                <!-- Время отправления -->
+                                <div class="passenger_info__data-time">
+                                    <div class="info__data-time">
+                                        <p class="passenger_info__titles">Время отправления</p>
+                                        <p class="passenger_info__data-time_text passenger_info__texts">16:20</p>
+                                    </div>
+                                    <div class="info__data-place">
+                                        <p class="passenger_info__titles">Номер места</p>
+                                        <div class="passenger_info__data-time_place passenger_info__texts">40</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card splitter -->
+                        <div class="card-route_info-splitter">
+                            <span>QR-код</span>
+                            <div class="blue-splitter"></div>
+                        </div>
+                        <!-- qr code -->
+                        <div class="card-qr_code-container">
+                            <div class="card-qr_code__content">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- policy -->
+                <div class="enter-passengers__policy">
+                    <p class="enter-passengers__policy-title uk-margin-remove">Политика конфиденциальности</p>
+                    <p class="enter-passengers__policy-text uk-margin-remove">
+                        Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных.
+                    </p>
+                </div>
+                <button class="ticket-apply__next-btn">Сохранить и показать билет</button>
+            </div>
+        </div>
+
+        <!-- sides bg -->
+        <div class="select_train-side-bg__left">
+            <img src="img/bottom-left_color.png" alt="side bg left">
+        </div>
+        <div class="select_train-side-bg__right">
+            <img src="img/bottom-right_color.png" alt="side bg right">
+        </div>
+    </main>
+    <!-- modals -->
+    <div class="modals">
+        <!-- privacy policy -->
+        <div class="privacy-policy-modal__container">
+            <!-- header -->
+            <div class="privacy-policy-modal__header">
+                <h5>Политика конфиденциальности</h5>
+                <button class="modal-close"></button>
+            </div>
+            <!-- content -->
+            <div class="privacy-policy-modal__content">
+                <p>
+                    Я, субъект персональных данных, в соответствии с Федеральным законом от 27 июля 2006 года № 152 «О персональных данных» предоставляю ООО «Уральские Железные Дороги» (далее — «УрЖД»), зарегистрированному по адресу: 620078, г. Екатеринбург, Гагарина ул., 28к10, этаж 1, согласие на обработку персональных данных, указанных мной на страницах сайта www.ural_rails.ru (далее — «Сайт») в сети «Интернет», при заполнении веб-форм, характер информации которых предполагает или допускает включение в них следующих персональных данных:
+                </p>
+                <p>Фамилия, Имя, Отчество; Пол; Дата рождения; Реквизиты документы, удостоверяющего личность (вид документа, государство выдачи, серия и номер); Электронная почта; Номер телефона; Место работы;</p>
+                <p>
+                    Сведения о поездке, с целью Сопровождение и администрирование Сайта, продвижение услуг, хранение информации для повторных заказов, прохождение опроса и публикация отзывов на Сайте, сопровождение и администрирование информационных систем, проведения маркетинговых кампаний, в том числе электронных рассылок, создания сегментов данных, анализа данных.
+                </p>
+                <p>
+                    Согласие предоставляется на совершение следующих действий (операций) с указанными в настоящем согласии персональными данными: сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (доступ, предоставление), блокирование, удаление, уничтожение, осуществляемых с использованием средств автоматизации (автоматизированная обработка). Я подтверждаю, что ознакомлен с требованиями законодательства Российской Федерации, устанавливающими порядок обработки персональных данных, с политикой Оператора в отношении обработки персональных данных, а также с моими правами и обязанностями в этой области.
+                </p>
+                <p>
+                    Согласие вступает в силу с момента предоставления согласия и действует в течение 10 лет для цели: «Хранение информации для повторных заказов» и по достижении остальных целей обработки или случая утраты необходимости в достижении этих целей.
+                </p>
+                <p>
+                    Согласие может быть отозвано мною в любое время на основании моего письменного заявления.
+                </p>
+            </div>
+        </div>
+        <!-- order confirm -->
+        <div class="order-confirm-modal__container">
+            <div class="order-confirm-modal__content">
+                <span class="order-confirm-modal__ticket"></span>
+                <p class="order-confirm-modal__text">Ваш билет успешно сохранен <br>на устройстве!</p>
+                <button class="order-confirm-modal__ok">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- js -->
+	<script src="libs/jquery/jquery.min.js"></script>
+	<script src="libs/jquery/plugins/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="libs/swiper/swiper.bundle.min.js"></script>
+	<script src="libs/fancybox/fancybox.min.js"></script>
+    <script src="libs/qrcode/qrcode.js"></script>
+	<script src="js/scripts.min.js"></script>
+</body>
+</html>
