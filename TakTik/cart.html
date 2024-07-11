@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/main.min.css">
+    <title>Корзина</title>
+</head>
+<body>
+    <!-- Шапка -->
+	<header class="header p-0">
+		<div class="header-container container">
+			<!-- Блок с лого -->
+			<div class="header-logo-container">
+				<a href="index.html">ТАКТИК</a>
+				<p>Вездеходы <br> экстремальной проходимости</p>
+			</div>
+			<!-- Блок меню -->
+			<div class="header-menu-container">
+				<ul>
+					<li><a href="lineup.html" class="menu-elem">Модельный ряд</a></li>
+					<li><a href="about.html" class="menu-elem">О нас</a></li>
+					<li><a href="guarantees.html" class="menu-elem">Гарантия</a></li>
+					<li><a href="gallery.html" class="menu-elem">Галерея</a></li>
+					<li><a href="news.html" class="menu-elem">Новости</a></li>
+					<li><a href="contacts.html" class="menu-elem">Контакты</a></li>
+				</ul>
+			</div>
+			<!-- Блок с контактами и корзиной -->
+			<div class="header-right-container">
+				<div class="header-contacts">
+					<span class="contacts-phone"></span>
+					<div>
+						<a href="tel:+79089048999">+7 (908) 904-89-99</a>
+						<a href="tel:+79089048999">+7 (908) 904-89-99</a>
+					</div>
+				</div>
+				<div class="header-cart">
+					<a href="cart.html" class="header-burger-cart"></a>
+					<button class="header-burger--open burger-btn">
+					</button>
+					<a href="cart.html" class="header-cart__link">Корзина</a>
+				</div>
+			</div>
+		</div>
+		<!-- burger -->
+		<div class="header-burger__content">
+			<div class="burger-menu">
+				<ul class="burger__content-list">
+					<li><a href="lineup.html" class="menu-elem">Модельный ряд</a></li>
+					<li><a href="about.html" class="menu-elem">О нас</a></li>
+					<li><a href="guarantees.html" class="menu-elem">Гарантия</a></li>
+					<li><a href="gallery.html" class="menu-elem">Галерея</a></li>
+					<li><a href="news.html" class="menu-elem">Новости</a></li>
+					<li><a href="contacts.html" class="menu-elem">Контакты</a></li>
+				</ul>
+			</div>
+			<div class="burger-contacts">
+				<div class="burger-contacts__tel">
+					<span class="contacts-phone"></span>
+					<div>
+						<a href="tel:+79089048999">+7 (908) 904-89-99</a>
+						<a href="tel:+79089048999">+7 (908) 904-89-99</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+    <!-- Main -->
+    <div class="cart">
+        <!-- Крошки -->
+		<ul class="about-breadcrumb breadcrumb p-0 container">
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="#" class="active">Корзина</a></li>
+		</ul>
+        <!-- Заголовок -->
+        <div class="cart__title container">
+            <h1 class="text-subtitle">Корзина</h1>
+        </div>
+        <!-- Карточки и блок оформления -->
+        <div class="cart__content">
+            <div class="container">
+                <div class="cart__items-info">
+                    <!-- Карточки товаров -->
+                    <div class="cart__content-items">
+                        <!-- Товар -->
+                        <div class="cart__content-item">
+                            <!-- Блок превью -->
+                            <div class="cart__item_product__preview">
+                                <img src="img/cars-5.jfif" alt="Картинка товара" class="cart-product-preview">
+                            </div>
+                            <!-- Блок названия, количества, цены и удаления -->
+                            <div class="cart__item_product_info">
+                                <!-- Количество и цена -->
+                                <div class="content-item_info__controls">
+                                    <!-- Название -->
+                                    <p class="cart-product-name">Вездеход Taktik</p>
+                                    <div class="cart-product-content">
+                                        <!-- Счетчик -->
+                                        <div class="item-info__controls-counter">
+                                            <button class="cart-counter-control cart-counter-minus">-</button>
+                                            <input type="text" value="1">
+                                            <button class="cart-counter-control cart-counter-plus">+</button>
+                                        </div>
+                                        <!-- Цена -->
+                                        <p class="cart-product-cost">12 390<span> руб.</span></p>
+                                    </div>
+                                </div>
+                                <!-- Кнопка удаления -->
+                                <div class="content-item_info__delete">
+                                    <button class="cart-delete"></button>
+                                </div>
+                            </div>
+                            <!-- Скрытый блок, показываемый при удалении элемента из корзины -->
+                            <div class="cart__item_deleted--fade">
+                                <button class="cart__item_deleted-restore orange-btn-link">Вернуть товар</button>
+                            </div>
+                        </div>
+                        <!-- Товар -->
+                        <div class="cart__content-item">
+                            <!-- Блок превью -->
+                            <div class="cart__item_product__preview">
+                                <img src="img/cars-5.jfif" alt="Картинка товара" class="cart-product-preview">
+                            </div>
+                            <!-- Блок названия, количества, цены и удаления -->
+                            <div class="cart__item_product_info">
+                                <!-- Количество и цена -->
+                                <div class="content-item_info__controls">
+                                    <!-- Название -->
+                                    <p class="cart-product-name">Вездеход Taktik</p>
+                                    <div class="cart-product-content">
+                                        <!-- Счетчик -->
+                                        <div class="item-info__controls-counter">
+                                            <button class="cart-counter-control cart-counter-minus">-</button>
+                                            <input type="text" value="1">
+                                            <button class="cart-counter-control cart-counter-plus">+</button>
+                                        </div>
+                                        <!-- Цена -->
+                                        <p class="cart-product-cost">12 390<span> руб.</span></p>
+                                    </div>
+                                </div>
+                                <!-- Кнопка удаления -->
+                                <div class="content-item_info__delete">
+                                    <button class="cart-delete"></button>
+                                </div>
+                            </div>
+                            <!-- Скрытый блок, показываемый при удалении элемента из корзины -->
+                            <div class="cart__item_deleted--fade">
+                                <button class="cart__item_deleted-restore orange-btn-link">Вернуть товар</button>
+                            </div>
+                        </div>
+                        <!-- Товар -->
+                        <div class="cart__content-item">
+                            <!-- Блок превью -->
+                            <div class="cart__item_product__preview">
+                                <img src="img/cars-5.jfif" alt="Картинка товара" class="cart-product-preview">
+                            </div>
+                            <!-- Блок названия, количества, цены и удаления -->
+                            <div class="cart__item_product_info">
+                                <!-- Количество и цена -->
+                                <div class="content-item_info__controls">
+                                    <!-- Название -->
+                                    <p class="cart-product-name">Вездеход Taktik</p>
+                                    <div class="cart-product-content">
+                                        <!-- Счетчик -->
+                                        <div class="item-info__controls-counter">
+                                            <button class="cart-counter-control cart-counter-minus">-</button>
+                                            <input type="text" value="1">
+                                            <button class="cart-counter-control cart-counter-plus">+</button>
+                                        </div>
+                                        <!-- Цена -->
+                                        <p class="cart-product-cost">12 390<span> руб.</span></p>
+                                    </div>
+                                </div>
+                                <!-- Кнопка удаления -->
+                                <div class="content-item_info__delete">
+                                    <button class="cart-delete"></button>
+                                </div>
+                            </div>
+                            <!-- Скрытый блок, показываемый при удалении элемента из корзины -->
+                            <div class="cart__item_deleted--fade">
+                                <button class="cart__item_deleted-restore orange-btn-link">Вернуть товар</button>
+                            </div>
+                        </div>
+                        <!-- Товар -->
+                        <div class="cart__content-item">
+                            <!-- Блок превью -->
+                            <div class="cart__item_product__preview">
+                                <img src="img/cars-5.jfif" alt="Картинка товара" class="cart-product-preview">
+                            </div>
+                            <!-- Блок названия, количества, цены и удаления -->
+                            <div class="cart__item_product_info">
+                                <!-- Количество и цена -->
+                                <div class="content-item_info__controls">
+                                    <!-- Название -->
+                                    <p class="cart-product-name">Вездеход Taktik</p>
+                                    <div class="cart-product-content">
+                                        <!-- Счетчик -->
+                                        <div class="item-info__controls-counter">
+                                            <button class="cart-counter-control cart-counter-minus">-</button>
+                                            <input type="text" value="1">
+                                            <button class="cart-counter-control cart-counter-plus">+</button>
+                                        </div>
+                                        <!-- Цена -->
+                                        <p class="cart-product-cost">12 390<span> руб.</span></p>
+                                    </div>
+                                </div>
+                                <!-- Кнопка удаления -->
+                                <div class="content-item_info__delete">
+                                    <button class="cart-delete"></button>
+                                </div>
+                            </div>
+                            <!-- Скрытый блок, показываемый при удалении элемента из корзины -->
+                            <div class="cart__item_deleted--fade">
+                                <button class="cart__item_deleted-restore orange-btn-link">Вернуть товар</button>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <!-- Очистить корзину -->
+                        <div class="cart-clear">
+                            <a href="?=" class="cart-clear-btn">Очистить корзину</a>
+                        </div>
+                    </div>
+                    <!-- Информация о заказе -->
+                    <div class="cart__content-info">
+                        <h2 class="text-subtitle">Ваш заказ</h2>
+                        <!-- Товары-->
+                        <div class="cart__content-info_item cart-items">
+                            <p>Товары (<span class="cart-items-count">3</span>):</p>
+                            <p class="cart-items-summ">83 370<span> ₽</span></p>
+                        </div>
+                        <!-- Скидка -->
+                        <div class="cart__content-info_item cart-sale">
+                            <p>Скидка:</p>
+                            <p class="cart-items-sale">18 584<span> ₽</span></p>
+                        </div>
+                        <!-- Разделитель -->
+                        <div class="splitter"></div>
+                        <!-- Общая стоимость -->
+                        <div class="cart__content-info_item cart-total">
+                            <p>Итого со скидкой:</p>
+                            <p class="cart-items-total">66 696<span> ₽</span></p>
+                        </div>
+                        <!-- К оформлению -->
+                        <button class="orange-btn-link">Перейти к оформлению</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Блок с вводом данных -->
+        <div class="cart__client-info">
+            <div class="container">
+                <!-- Заголовок -->
+                <h2>Ваши данные</h2>
+                <!-- Контент -->
+                <div class="client-info__content">
+                    <div class="tab">
+                        <!-- tabs -->
+                        <ul class="tabs__list">
+                            <li class="tabs__item">
+                                <button class="tab-menu active" data-item-tab="individual">Физическое лицо</button>
+                            </li>
+                            <li class="tabs__item">
+                                <button class="tab-menu" data-item-tab="entity">Юридическое лицо</button>
+                            </li>
+                        </ul>
+                        <!-- content blocks -->
+                        <div class="tabs__content-wrapper">
+                            <!-- Физическое лицо -->
+                            <div class="tabs__content-item active tab-content" data-item-tab-target="individual">
+                                <!-- Заполнение данных -->
+                                <div class="tabs__content-item_wrapper">
+                                    <!-- Данные получателя -->
+                                    <div class="tabs__content-item_row">
+                                        <h5>Данные получаетеля заказа:</h5>
+                                        <div class="tabs__content-item_row__line">
+                                            <input type="text" class="form-input" placeholder="ФИО получателя" id="individualSFL">
+                                            <input type="text" class="form-input" placeholder="Телефон" id="individualTel">
+                                            <input type="text" class="form-input" placeholder="Email" id="individualEmail">
+                                        </div>
+                                    </div>
+                                    <!-- Адрес доставки -->
+                                    <div class="tabs__content-item_row">
+                                        <h5>Укажите адрес доставки:</h5>
+                                        <div class="tabs__content-item_row__line">
+                                            <input type="text" class="form-input" placeholder="Адрес доставки" id="individualAddr">
+                                            <input type="text" class="form-input" placeholder="Подъезд" id="individualEntrance">
+                                            <input type="text" class="form-input" placeholder="Квартира" id="individualApartment">
+                                        </div>
+                                    </div>
+                                    <!-- Комментарий -->
+                                    <div class="tabs__content-item_row">
+                                        <textarea id="individualComment" cols="30" rows="10" class="form-input" placeholder="Комментарий к заказу"></textarea>
+                                    </div>
+                                </div>
+                                <!-- Выбор способа доставки и оплаты -->
+                                <div class="tabs__content-pay_wrapper">
+                                    <!-- Способы достаки -->
+                                    <div class="tabs__content-pay__delivery">
+                                        <h5>Способы доставки</h5>
+                                        <div class="pay__delivery-items">
+                                            <!-- Почта России -->
+                                            <label>
+                                                <input type="radio" name="deliveryVar" id="russianPost" checked>
+                                                <span class="pay__delivery-info">
+                                                    <!-- Название -->
+                                                    <span class="delivery-name">Почта России — <span class="delivery-name-cost">500</span>₽</span>
+                                                    <!-- Описание -->
+                                                    <span class="delivery-description">доставка по всей России небольших посылок</span>
+                                                </span>
+                                            </label>
+                                            <!-- Курьер -->
+                                            <label>
+                                                <input type="radio" name="deliveryVar" id="russianPost">
+                                                <span class="pay__delivery-info">
+                                                    <!-- Название -->
+                                                    <span class="delivery-name">Курьер — <span class="delivery-name-cost">631</span>₽</span>
+                                                    <!-- Описание -->
+                                                    <span class="delivery-description">доставка до двери вашего дома</span>
+                                                </span>
+                                            </label>
+                                            <!-- Самовывоз -->
+                                            <label>
+                                                <input type="radio" name="deliveryVar" id="russianPost">
+                                                <span class="pay__delivery-info">
+                                                    <!-- Название -->
+                                                    <span class="delivery-name">Самовывоз — <span class="delivery-name-cost">491</span>₽</span>
+                                                    <!-- Описание -->
+                                                    <span class="delivery-description">доставка до ближайшего пункта самовывоза</span>
+                                                </span>
+                                            </label>
+                                            <!-- Мои склады -->
+                                            <label>
+                                                <input type="radio" name="deliveryVar" id="russianPost">
+                                                <span class="pay__delivery-info">
+                                                    <!-- Название -->
+                                                    <span class="delivery-name">Мои склады — <span class="delivery-name-cost">0</span>₽</span>
+                                                    <!-- Описание -->
+                                                    <span class="delivery-description">стоимость — 100 ₽; бесплатно от суммы 2000 ₽</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- Способы оплаты -->
+                                    <div class="tabs__content-pay__payment">
+                                        <h5>Способы оплаты</h5>
+                                        <div class="pay__payment-items">
+                                            <!-- Наличными -->
+                                            <label>
+                                                <input type="radio" name="payVar" id="russianPost" checked>
+                                                <span class="pay__delivery-info">
+                                                    <!-- Название -->
+                                                    <span class="delivery-name">Наличными курьеру</span>
+                                                    <!-- Описание -->
+                                                    <span class="delivery-description">заказ необходимо оплатить курьеру на руки наличными</span>
+                                                </span>
+                                            </label>
+                                            <!-- Банковские платежи -->
+                                            <label>
+                                                <input type="radio" name="payVar" id="russianPost">
+                                                <span class="pay__delivery-info">
+                                                    <!-- Название -->
+                                                    <span class="delivery-name">Банковские платежи</span>
+                                                    <!-- Описание -->
+                                                    <span class="delivery-description">оплатите покупку на почте при вручении</span>
+                                                </span>
+                                            </label>
+                                            <!-- Оплата онлайн -->
+                                            <label>
+                                                <input type="radio" name="payVar" id="russianPost">
+                                                <span class="pay__delivery-info">
+                                                    <!-- Название -->
+                                                    <span class="delivery-name">Оплата онлайн</span>
+                                                    <!-- Описание -->
+                                                    <span class="delivery-description">оплатите вашу покупку с помощью Яндекс.Кассы (карты, онлайн-кошельки)</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Юридическое лицо -->
+                            <div class="tabs__content-item tab-content" data-item-tab-target="entity">
+                                <!-- items -->
+                                <div class="tabs__content-item_wrapper">
+                                    <!-- Данные получателя -->
+                                    <div class="tabs__content-item_row">
+                                        <h5>Данные получаетеля заказа:</h5>
+                                        <div class="tabs__content-item_row__line">
+                                            <input type="text" class="form-input" placeholder="ФИО получателя" id="entitySFL">
+                                            <input type="text" class="form-input" placeholder="Телефон" id="entityTel">
+                                            <input type="text" class="form-input" placeholder="Email" id="entityEmail">
+                                            <input type="text" class="form-input" placeholder="наименование юридического лица" id="entityName">
+                                            <input type="text" class="form-input" placeholder="ИНН" id="entityINN">
+                                            <input type="text" class="form-input" placeholder="Файл с реквизитами" id="entityFile">
+                                        </div>
+                                    </div>
+                                    <!-- Комментарий -->
+                                    <div class="tabs__content-item_row">
+                                        <textarea id="entityComment" cols="30" rows="10" class="form-input" placeholder="Комментарий к заказу"></textarea>
+                                    </div>
+                                </div>
+                                <!-- Выбор способа доставки и оплаты -->
+                                <div class="tabs__content-pay_wrapper">
+                                    <!-- Способы достаки -->
+                                    <div class="tabs__content-pay__delivery">
+                                        <h5>Способы доставки</h5>
+                                        <div class="pay__delivery-items">
+                                            <!-- Почта России -->
+                                            <label>
+                                                <input type="radio" name="deliveryVar" id="russianPost" checked>
+                                                <span class="pay__delivery-info">
+                                                    <!-- Название -->
+                                                    <span class="delivery-name">Почта России — <span class="delivery-name-cost">500</span>₽</span>
+                                                    <!-- Описание -->
+                                                    <span class="delivery-description">доставка по всей России небольших посылок</span>
+                                                </span>
+                                            </label>
+                                            <!-- Курьер -->
+                                            <label>
+                                                <input type="radio" name="deliveryVar" id="russianPost">
+                                                <span class="pay__delivery-info">
+                                                    <!-- Название -->
+                                                    <span class="delivery-name">Курьер — <span class="delivery-name-cost">631</span>₽</span>
+                                                    <!-- Описание -->
+                                                    <span class="delivery-description">доставка до двери вашего дома</span>
+                                                </span>
+                                            </label>
+                                            <!-- Самовывоз -->
+                                            <label>
+                                                <input type="radio" name="deliveryVar" id="russianPost">
+                                                <span class="pay__delivery-info">
+                                                    <!-- Название -->
+                                                    <span class="delivery-name">Самовывоз — <span class="delivery-name-cost">491</span>₽</span>
+                                                    <!-- Описание -->
+                                                    <span class="delivery-description">доставка до ближайшего пункта самовывоза</span>
+                                                </span>
+                                            </label>
+                                            <!-- Мои склады -->
+                                            <label>
+                                                <input type="radio" name="deliveryVar" id="russianPost">
+                                                <span class="pay__delivery-info">
+                                                    <!-- Название -->
+                                                    <span class="delivery-name">Мои склады — <span class="delivery-name-cost">0</span>₽</span>
+                                                    <!-- Описание -->
+                                                    <span class="delivery-description">стоимость — 100 ₽; бесплатно от суммы 2000 ₽</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- Способы оплаты -->
+                                    <div class="tabs__content-pay__payment">
+                                        <h5>Способы оплаты</h5>
+                                        <div class="pay__payment-items">
+                                            <!-- Безналичный расчет -->
+                                            <label>
+                                                <input type="radio" name="payVar" id="russianPost" checked>
+                                                <span class="pay__delivery-info">
+                                                    <!-- Название -->
+                                                    <span class="delivery-name">Безналичный расчет</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- media -->
+    </div>
+
+
+    <!-- Footer -->
+	<footer class="footer">
+		<div class="footer-container container">
+			<!-- Лого и политика конфиденциальности -->
+			<div class="footer_logo-policy">
+				<div class="footer_logo">
+					<a href="index.html">ТАКТИК</a>
+					<p>Вездеходы <br> экстремальной проходимости</p>
+				</div>
+				<div class="footer_policy">
+					<a href="#">Политика конфиденциальности</a>
+					<a href="#">Политика конфиденциальности</a>
+				</div>
+			</div>
+			<!-- Меню -->
+			<div class="footer_menu">
+				<!-- Каталог -->
+				<div class="footer_menu-catalog">
+					<p>КАТАЛОГ</p>
+					<ul>
+						<li><a href="lineup.html">Модельный ряд</a></li>
+						<li><a href="spare-parts.html">Запасные части</a></li>
+						<li><a href="accessories.html">Аксессуары</a></li>
+					</ul>
+				</div>
+				<!-- Навигация -->
+				<div class="footer_menu-navigation">
+					<p>НАВИГАЦИЯ</p>
+					<ul>
+						<li><a href="about.html">О нас</a></li>
+						<li><a href="guarantees.html">Гарантия</a></li>
+						<li><a href="gallery.html">Галерея</a></li>
+						<li><a href="news.html">Новости</a></li>
+						<li><a href="contacts.html">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Контакты -->
+			<div class="footer_contacts">
+				<p>КОНТАКТЫ</p>
+				<div class="footer_contacts-content">
+					<p>Псков, Индустриальная 9/1 (производство)</p>
+					<a href="tel:+78006008437">+7 (800) 600-84-37</a>
+					<a href="#" class="feedback-btn">Обратный звонок</a>
+					<a href="mailto:vezdehod.pskov@gmail.com">vezdehod.pskov@gmail.com</a>
+				</div>
+			</div>
+		</div>
+		<!-- modals -->
+		<!-- обратный звонок -->
+		<div class="call-back_modal">
+			<h2 class="modal-title">Обратный звонок</h2>
+			<!-- content -->
+			<form id="callback" class="modal-form">
+				<input type="text" id="callback-name" class="callback-input" name="name" placeholder="Имя">
+				<input type="tel" id="callback-tel" class="callback-input" name="phone" placeholder="Телефон">
+				<div class="modal-privacy">
+					<p>Нажимая кнопку, вы даете согласие <br> на обработку своих персональных данных</p>
+				</div>
+				<input type="submit" value="Заказать обратный звонок" id="callback-send" class="orange-btn-link callback-send">
+			</form>
+		</div>
+	</footer>
+
+	<script type='module' src="libs/fancybox/fancybox.min.js"></script>
+	<script type="module" src="libs/jquery/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script type='module' src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
+	<script src="js/scripts.min.js"></script>
+</body>
+</html>

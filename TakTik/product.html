@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/main.min.css">
+    <title>Карточка товара</title>
+</head>
+<body>
+    <!-- Шапка -->
+	<header class="header p-0">
+		<div class="header-container container">
+			<!-- Блок с лого -->
+			<div class="header-logo-container">
+				<a href="index.html">ТАКТИК</a>
+				<p>Вездеходы <br> экстремальной проходимости</p>
+			</div>
+			<!-- Блок меню -->
+			<div class="header-menu-container">
+				<ul>
+					<li><a href="lineup.html" class="menu-elem">Модельный ряд</a></li>
+					<li><a href="about.html" class="menu-elem">О нас</a></li>
+					<li><a href="guarantees.html" class="menu-elem">Гарантия</a></li>
+					<li><a href="gallery.html" class="menu-elem">Галерея</a></li>
+					<li><a href="news.html" class="menu-elem">Новости</a></li>
+					<li><a href="contacts.html" class="menu-elem">Контакты</a></li>
+				</ul>
+			</div>
+			<!-- Блок с контактами и корзиной -->
+			<div class="header-right-container">
+				<div class="header-contacts">
+					<span class="contacts-phone"></span>
+					<div>
+						<a href="tel:+79089048999">+7 (908) 904-89-99</a>
+						<a href="tel:+79089048999">+7 (908) 904-89-99</a>
+					</div>
+				</div>
+				<div class="header-cart">
+					<a href="cart.html" class="header-burger-cart"></a>
+					<button class="header-burger--open burger-btn">
+					</button>
+					<a href="cart.html" class="header-cart__link">Корзина</a>
+				</div>
+			</div>
+		</div>
+		<!-- burger -->
+		<div class="header-burger__content">
+			<div class="burger-menu">
+				<ul class="burger__content-list">
+					<li><a href="lineup.html" class="menu-elem">Модельный ряд</a></li>
+					<li><a href="about.html" class="menu-elem">О нас</a></li>
+					<li><a href="guarantees.html" class="menu-elem">Гарантия</a></li>
+					<li><a href="gallery.html" class="menu-elem">Галерея</a></li>
+					<li><a href="news.html" class="menu-elem">Новости</a></li>
+					<li><a href="contacts.html" class="menu-elem">Контакты</a></li>
+				</ul>
+			</div>
+			<div class="burger-contacts">
+				<div class="burger-contacts__tel">
+					<span class="contacts-phone"></span>
+					<div>
+						<a href="tel:+79089048999">+7 (908) 904-89-99</a>
+						<a href="tel:+79089048999">+7 (908) 904-89-99</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+    <!-- Main -->
+    <main class="product">
+        <!-- Крошки -->
+        <ul class="about-breadcrumb breadcrumb p-0 container">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="index.html#lineup">Каталог</a></li>
+            <li class="active"><a href="#">Товар</a></li>
+        </ul>
+		<!-- Характеристики товара -->
+		<div class="product__chars">
+			<div class="container">
+				<!-- Заголовок -->
+				<h1 class="text-item-title">Название товара</h1>
+				<!-- Слайдер и характеристики -->
+				<div class="product__content">
+					<!-- Слайды -->
+					<div class="product__chars-about">
+						<div class="product__chars-about-media">
+							<!-- slides -->
+							<div class="swiper-container m-0 products-slider-slides">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="img/cars-5.jfif" />
+									</div>
+									<div class="swiper-slide">
+										<img src="img/cars-5.jfif" />
+									</div>
+									<div class="swiper-slide">
+										<img src="img/cars-5.jfif" />
+									</div>
+									<div class="swiper-slide">
+										<img src="img/cars-5.jfif" />
+									</div>
+									<div class="swiper-slide">
+										<img src="img/cars-5.jfif" />
+									</div>
+									<div class="swiper-slide">
+										<img src="img/cars-5.jfif" />
+									</div>
+								</div>
+							</div>
+							<!-- thumbs -->
+							<div class="swiper-container m-0 products-slider-thumbs">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="img/cars-5.jfif" />
+									</div>
+									<div class="swiper-slide">
+										<img src="img/cars-5.jfif" />
+									</div>
+									<div class="swiper-slide">
+										<img src="img/cars-5.jfif" />
+									</div>
+									<div class="swiper-slide">
+										<img src="img/cars-5.jfif" />
+									</div>
+									<div class="swiper-slide">
+										<img src="img/cars-5.jfif" />
+									</div>
+									<div class="swiper-slide">
+										<img src="img/cars-5.jfif" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Опции -->
+					<div class="product__chars-options">
+						<!-- Характеристики -->
+						<div class="chars-options__info">
+							<div class="chars-options__tabs tab">
+								<!-- tabs -->
+								<ul class="tabs__list">
+								  	<li class="tabs__item">
+										<button class="chars-options__btn active tab-menu" data-item-tab="tech_chars">Технические характеристики</button>
+									</li>
+									<li class="tabs__item">
+										<button class="chars-options__btn tab-menu" data-item-tab="general_chars">Общие характеристики</button>
+									</li>
+									<li class="tabs__item">
+										<button class="chars-options__btn tab-menu" data-item-tab="patency_chars">Характеристики проходимости</button>
+									</li>
+								</ul>
+								<!-- content blocks -->
+								<div class="tabs__content-wrapper">
+									<!-- tab -->
+									<div class="tabs__content-item active tab-content" data-item-tab-target="tech_chars">
+										<!-- items -->
+										<div class="tabs__content-item_wrapper">
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_name">подъём в гору</p>
+												<p class="tabs_content-item_char">max 40</p>
+											</div>
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_char">12345</p>
+											</div>
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_name">подъём в гору</p>
+												<p class="tabs_content-item_char">max 40</p>
+											</div>
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_char">12345</p>
+											</div>
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_name">подъём в гору</p>
+												<p class="tabs_content-item_char">max 40</p>
+											</div>
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_char">12345</p>
+											</div>
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_name">подъём в гору</p>
+												<p class="tabs_content-item_char">max 40</p>
+											</div>
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_char">12345</p>
+											</div>
+										</div>
+									</div>
+									<!-- tab -->
+									<div class="tabs__content-item tab-content" data-item-tab-target="general_chars">
+										<!-- items -->
+										<div class="tabs__content-item_wrapper">
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_name">подъём в гору</p>
+												<p class="tabs_content-item_char">max 40</p>
+											</div>
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_name">подъём в гору</p>
+												<p class="tabs_content-item_char">max 40</p>
+											</div>
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_name">подъём в гору</p>
+												<p class="tabs_content-item_char">max 40</p>
+											</div>
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_name">подъём в гору</p>
+												<p class="tabs_content-item_char">max 40</p>
+											</div>
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_name">подъём в гору</p>
+												<p class="tabs_content-item_char">max 40</p>
+											</div>
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_name">подъём в гору</p>
+												<p class="tabs_content-item_char">max 40</p>
+											</div>
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_name">подъём в гору</p>
+												<p class="tabs_content-item_char">max 40</p>
+											</div>
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_name">подъём в гору</p>
+												<p class="tabs_content-item_char">max 40</p>
+											</div>
+										</div>
+									</div>
+									<!-- tab -->
+									<div class="tabs__content-item tab-content" data-item-tab-target="patency_chars">
+										<!-- items -->
+										<div class="tabs__content-item_wrapper">
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_name">подъём в гору</p>
+												<p class="tabs_content-item_char">max 40</p>
+											</div>
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_char">12345</p>
+											</div>
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_name">подъём в гору</p>
+												<p class="tabs_content-item_char">max 40</p>
+											</div>
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_char">12345</p>
+											</div>
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_name">подъём в гору</p>
+												<p class="tabs_content-item_char">max 40</p>
+											</div>
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_char">12345</p>
+											</div>
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												<p class="tabs_content-item_name">подъём в гору</p>
+												<p class="tabs_content-item_char">max 40</p>
+											</div>
+											<!-- item -->
+											<div class="tabs__content-item_row">
+												12345
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Кнопки управления -->
+						<div class="chars-options__controls">
+							<p>Цена от <span>12 390</span> руб.</p>
+							<div class="chars-options__controls-buttons">
+								<a href="#" class="controls-buttons__config orange-btn-link">Конфигуратор</a>
+								<a href="#" class="controls-buttons__pdf orange-btn-bordered">Характиристики в PDF</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Конфигуратор -->
+		<div class="configurator">
+			<div class="container">
+				<!-- tabs -->
+				<div class="configutator__items-tab tab2">
+					<ul class="tabs__list">
+						<!-- Выберите модель -->
+						<li class="tabs__item">
+							<button class="configurator-tab__menu tab-menu active orange-block" data-item-tab="select_model">Выберите модель</button>
+							<span class="configurator-tabs__item-arrow"></span>
+						</li>
+						
+						<!-- Выберите комплектацию -->
+						<li class="tabs__item">
+							<button class="configurator-tab__menu tab-menu" data-item-tab="select_complect">Выберите комплектацию</button>
+						</li>
+						
+						<!-- Выберите доп оборудование -->
+						<li class="tabs__item">
+							<span class="configurator-tabs__item-arrow"></span>
+							<button class="configurator-tab__menu tab-menu" data-item-tab="select-add-opt">Выберите дополнительное <br> оборудование</button>
+						</li>
+						<!-- Выберите условия покупки -->
+						<li class="tabs__item">
+							<span class="configurator-tabs__item-arrow"></span>
+							<button class="configurator-tab__menu tab-menu" data-item-tab="select-pay-conditions">Выберите условия <br> покупки</button>
+						</li>
+					</ul>
+					<!-- Контент -->
+					<div class="configurator__items-cards">
+						<!-- Выберите модель -->
+						<div class="configurator__cards-item tab-content2 active" data-item-tab-target="select_model">
+							<!-- Блок -->
+							<div class="configurator__card selected">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Taktik 35</h3>
+								<button class="configurator__card-select active orange-btn-bordered">Выбрать</button>
+							</div>
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Taktik 35</h3>
+								<button class="configurator__card-select active orange-btn-bordered">Выбрать</button>
+							</div>
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Taktik 35</h3>
+								<button class="configurator__card-select active orange-btn-bordered">Выбрать</button>
+							</div>
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Taktik 35</h3>
+								<button class="configurator__card-select active orange-btn-bordered">Выбрать</button>
+							</div>
+						</div>
+						<!-- Выберите комплектацию -->
+						<div class="configurator__cards-item tab-content2" data-item-tab-target="select_complect">
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Комплектация 1</h3>
+								<button class="configurator__card-select orange-btn-bordered">Выбрать</button>
+							</div>
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Комплектация 1</h3>
+								<button class="configurator__card-select orange-btn-bordered">Выбрать</button>
+							</div>
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Комплектация 1</h3>
+								<button class="configurator__card-select orange-btn-bordered">Выбрать</button>
+							</div>
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Комплектация 1</h3>
+								<button class="configurator__card-select orange-btn-bordered">Выбрать</button>
+							</div>
+						</div>
+						<!-- Выберите доп оборудование -->
+						<div class="configurator__cards-item tab-content2" data-item-tab-target="select-add-opt">
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Оборудование 1</h3>
+								<button class="configurator__card-select orange-btn-bordered">Выбрать</button>
+							</div>
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Оборудование 1</h3>
+								<button class="configurator__card-select orange-btn-bordered">Выбрать</button>
+							</div>
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Оборудование 1</h3>
+								<button class="configurator__card-select orange-btn-bordered">Выбрать</button>
+							</div>
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Оборудование 1</h3>
+								<button class="configurator__card-select orange-btn-bordered">Выбрать</button>
+							</div>
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Оборудование 1</h3>
+								<button class="configurator__card-select orange-btn-bordered">Выбрать</button>
+							</div>
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Оборудование 1</h3>
+								<button class="configurator__card-select orange-btn-bordered">Выбрать</button>
+							</div>
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Оборудование 1</h3>
+								<button class="configurator__card-select orange-btn-bordered">Выбрать</button>
+							</div>
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Оборудование 1</h3>
+								<button class="configurator__card-select orange-btn-bordered">Выбрать</button>
+							</div>
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Оборудование 1</h3>
+								<button class="configurator__card-select orange-btn-bordered">Выбрать</button>
+							</div>
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Оборудование 1</h3>
+								<button class="configurator__card-select orange-btn-bordered">Выбрать</button>
+							</div>
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Оборудование 1</h3>
+								<button class="configurator__card-select orange-btn-bordered">Выбрать</button>
+							</div>
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Оборудование 1</h3>
+								<button class="configurator__card-select orange-btn-bordered">Выбрать</button>
+							</div>
+						</div>
+						<!-- Выберите условия покупки -->
+						<div class="configurator__cards-item tab-content2" data-item-tab-target="select-pay-conditions">
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Условия 1</h3>
+								<button class="configurator__card-select orange-btn-bordered">Выбрать</button>
+							</div>
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Условия 1</h3>
+								<button class="configurator__card-select orange-btn-bordered">Выбрать</button>
+							</div>
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Условия 1</h3>
+								<button class="configurator__card-select orange-btn-bordered">Выбрать</button>
+							</div>
+							<!-- Блок -->
+							<div class="configurator__card">
+								<div class="configurator__card-preview">
+									<img src="img/cars-2.jfif" alt="Картинка опции">
+								</div>
+								<h3 class="configurator__card-name">Условия 1</h3>
+								<button class="configurator__card-select orange-btn-bordered">Выбрать</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- next btn -->
+				<button class="configurator__tab-next orange-btn-link">Перейти к следующему шагу</button>
+			</div>
+		</div>
+		<!-- Что в комплекте -->
+		<div class="product__kit">
+			<div class="container">
+				<!-- Заголовок -->
+				<h2 class="text-title"><span class="orange-block">Что в комплекте</span></h2>
+				<!-- Контент -->
+				<div class="product__kit-content">
+					<div class="product__kit-advantages">
+						<!-- Карточка -->
+						<div class="kit-advantages__card">
+							<!-- Превью -->
+							<div class="kit-advantages__card-preview">
+								<img src="img/cars-3.jfif" alt="Преимущество картинка">
+							</div>
+							<!-- Текст -->
+							<p class="text-subtitle">Преимущество</p>
+						</div>
+						<!-- Карточка -->
+						<div class="kit-advantages__card">
+							<!-- Превью -->
+							<div class="kit-advantages__card-preview">
+								<img src="img/cars-3.jfif" alt="Преимущество картинка">
+							</div>
+							<!-- Текст -->
+							<p class="text-subtitle">Преимущество</p>
+						</div>
+						<!-- Карточка -->
+						<div class="kit-advantages__card">
+							<!-- Превью -->
+							<div class="kit-advantages__card-preview">
+								<img src="img/cars-3.jfif" alt="Преимущество картинка">
+							</div>
+							<!-- Текст -->
+							<p class="text-subtitle">Преимущество</p>
+						</div>
+						<!-- Карточка -->
+						<div class="kit-advantages__card">
+							<!-- Превью -->
+							<div class="kit-advantages__card-preview">
+								<img src="img/cars-3.jfif" alt="Преимущество картинка">
+							</div>
+							<!-- Текст -->
+							<p class="text-subtitle">Преимущество</p>
+						</div>
+						<!--  -->
+						<!-- Карточка -->
+						<div class="kit-advantages__card">
+							<!-- Превью -->
+							<div class="kit-advantages__card-preview">
+								<img src="img/cars-3.jfif" alt="Преимущество картинка">
+							</div>
+							<!-- Текст -->
+							<p class="text-subtitle">Преимущество</p>
+						</div>
+						<!-- Карточка -->
+						<div class="kit-advantages__card">
+							<!-- Превью -->
+							<div class="kit-advantages__card-preview">
+								<img src="img/cars-3.jfif" alt="Преимущество картинка">
+							</div>
+							<!-- Текст -->
+							<p class="text-subtitle">Преимущество</p>
+						</div>
+						<!-- Карточка -->
+						<div class="kit-advantages__card">
+							<!-- Превью -->
+							<div class="kit-advantages__card-preview">
+								<img src="img/cars-3.jfif" alt="Преимущество картинка">
+							</div>
+							<!-- Текст -->
+							<p class="text-subtitle">Преимущество</p>
+						</div>
+						<!-- Карточка -->
+						<div class="kit-advantages__card">
+							<!-- Превью -->
+							<div class="kit-advantages__card-preview">
+								<img src="img/cars-3.jfif" alt="Преимущество картинка">
+							</div>
+							<!-- Текст -->
+							<p class="text-subtitle">Преимущество</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Часто задаваемые вопросы -->
+		<div class="product__faqs">
+			<div class="container">
+				<!-- Заголовок -->
+				<h2 class="text-title"><span class="orange-block">Часто задаваемые вопросы</span></h2>
+				<!-- Контент -->
+				<div class="product__faqs-content">
+					<!-- Аккордеон -->
+					<div class="faqs-content__accordion">
+						<div class="faqs__accordion-header">
+							<h4>Часто задаваемые вопросы</h4>
+							<span class="accordion_header-icon"></span>
+						</div>
+						<div class="faqs__accordion-content">
+							<p>Часто задаваемые вопросы</p>
+						</div>
+					</div>
+					<!-- Аккордеон -->
+					<div class="faqs-content__accordion">
+						<div class="faqs__accordion-header">
+							<h4>Часто задаваемые вопросы</h4>
+							<span class="accordion_header-icon"></span>
+						</div>
+						<div class="faqs__accordion-content">
+							<p>Часто задаваемые вопросы</p>
+						</div>
+					</div>
+					<!-- Аккордеон -->
+					<div class="faqs-content__accordion">
+						<div class="faqs__accordion-header">
+							<h4>Часто задаваемые вопросы</h4>
+							<span class="accordion_header-icon"></span>
+						</div>
+						<div class="faqs__accordion-content">
+							<p>Часто задаваемые вопросы</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Часто задаваемые вопросы карточки -->
+		<div class="product__faqs_cards">
+			<div class="container product__faqs_cards-items">
+				<!-- Карточка -->
+				<div class="product__faqs_cards-item">
+					<!-- Изображение -->
+					<div class="faqs_cards-preview">
+						<div class="faqs_cards-preview--fade"></div>
+						<div class="faqs_cards-preview_media">
+							<img src="img/cars-2.jfif" alt="Часто задаваемые вопросы изображение">
+						</div>
+					</div>
+					<!-- Контент -->
+					<div class="faqs_cards-content">
+						<h3>Часто задаваемые вопросы</h3>
+						<a href="#">Подробнее</a>
+					</div>
+				</div>
+				<!-- Карточка -->
+				<div class="product__faqs_cards-item">
+					<!-- Изображение -->
+					<div class="faqs_cards-preview">
+						<div class="faqs_cards-preview_media">
+							<img src="img/cars-2.jfif" alt="Часто задаваемые вопросы изображение">
+						</div>
+					</div>
+					<!-- Контент -->
+					<div class="faqs_cards-content">
+						<h3>Часто задаваемые вопросы</h3>
+						<a href="#">Подробнее</a>
+					</div>
+				</div>
+			</div>
+		</div>
+    </main>
+
+    <!-- Footer -->
+	<footer class="footer">
+		<div class="footer-container container">
+			<!-- Лого и политика конфиденциальности -->
+			<div class="footer_logo-policy">
+				<div class="footer_logo">
+					<a href="index.html">ТАКТИК</a>
+					<p>Вездеходы <br> экстремальной проходимости</p>
+				</div>
+				<div class="footer_policy">
+					<a href="#">Политика конфиденциальности</a>
+					<a href="#">Политика конфиденциальности</a>
+				</div>
+			</div>
+			<!-- Меню -->
+			<div class="footer_menu">
+				<!-- Каталог -->
+				<div class="footer_menu-catalog">
+					<p>КАТАЛОГ</p>
+					<ul>
+						<li><a href="lineup.html">Модельный ряд</a></li>
+						<li><a href="spare-parts.html">Запасные части</a></li>
+						<li><a href="accessories.html">Аксессуары</a></li>
+					</ul>
+				</div>
+				<!-- Навигация -->
+				<div class="footer_menu-navigation">
+					<p>НАВИГАЦИЯ</p>
+					<ul>
+						<li><a href="about.html">О нас</a></li>
+						<li><a href="guarantees.html">Гарантия</a></li>
+						<li><a href="gallery.html">Галерея</a></li>
+						<li><a href="news.html">Новости</a></li>
+						<li><a href="contacts.html">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- Контакты -->
+			<div class="footer_contacts">
+				<p>КОНТАКТЫ</p>
+				<div class="footer_contacts-content">
+					<p>Псков, Индустриальная 9/1 (производство)</p>
+					<a href="tel:+78006008437">+7 (800) 600-84-37</a>
+					<a href="#" class="feedback-btn">Обратный звонок</a>
+					<a href="mailto:vezdehod.pskov@gmail.com">vezdehod.pskov@gmail.com</a>
+				</div>
+			</div>
+		</div>
+		<!-- modals -->
+		<!-- обратный звонок -->
+		<div class="call-back_modal">
+			<h2 class="modal-title">Обратный звонок</h2>
+			<!-- content -->
+			<form id="callback" class="modal-form">
+				<input type="text" id="callback-name" class="callback-input" name="name" placeholder="Имя">
+				<input type="tel" id="callback-tel" class="callback-input" name="phone" placeholder="Телефон">
+				<div class="modal-privacy">
+					<p>Нажимая кнопку, вы даете согласие <br> на обработку своих персональных данных</p>
+				</div>
+				<input type="submit" value="Заказать обратный звонок" id="callback-send" class="orange-btn-link callback-send">
+			</form>
+		</div>
+	</footer>
+
+	<script type='module' src="libs/fancybox/fancybox.min.js"></script>
+	<script type="module" src="libs/jquery/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script type='module' src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+</body>
+</html>
