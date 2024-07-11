@@ -1,0 +1,98 @@
+@import "vars"
+
+// Btns Styles
+%call-btn
+    height: 40px
+    border: 1px solid $primary-sky
+    background: transparent
+    color: $primary-sky
+    font-size: .75rem
+    font-weight: 600
+%call-btn-hover
+    height: 40px
+    border: 1px solid $primary-sky
+    background: $btn-hover-grad
+    color: $primary-white
+    font-size: .75rem
+    font-weight: 600
+%action-btn
+    height: 40px
+    border: 1px solid $primary-sky
+    background: transparent
+    color: $primary-sky
+    font-weight: 500
+    border-radius: 6px
+    width: 100%
+%action-btn-hover
+    height: 40px
+    border: 1px solid $primary-sky
+    background: $primary-sky
+    color: $primary-white
+    font-weight: 500
+    border-radius: 6px
+    width: 100%
+%btn-inactive
+    background: $placeholder-text
+    color: $primary-white
+    font-weight: 500
+    font-size: .875rem
+    height: 27px
+    border-radius: 6px
+// Flex Block Style
+@mixin FlexLayout($direction, $gap)
+    display: flex
+    flex-direction: $direction
+    gap: $gap
+
+// Share Text Inputs Styles
+@mixin TextInputs()
+    .text_input-label
+        @include FlexLayout(column, 9px)
+        text-align: left
+        font-size: .875rem
+        font-weight: 500
+        &:hover
+            cursor: pointer
+        input
+            height: 40px
+            padding-left: 14px
+            font-size: .875rem
+            border-radius: 6px
+            border: 1px solid $placeholder-stroke
+            transition: all .6s ease
+            &:focus
+                border-color: $text-gray
+                box-shadow: $circle-shadow
+                &::placeholder
+                   color: transparent
+    textarea
+        text-align: left
+        font-size: .875rem
+        font-weight: 500
+        resize: vertical
+        min-height: 40px
+        padding-left: 14px
+        padding-top: 11px
+        font-size: .875rem
+        border-radius: 6px
+        border: 1px solid $placeholder-stroke
+        transition: all .6s ease
+        &:hover
+            cursor: text!important
+        &:focus
+            border-color: $text-gray
+            box-shadow: $circle-shadow
+            &::placeholder
+                color: transparent
+                
+// Set Icons Sizes And Img
+@mixin Icns($name, $width, $height)
+    display: block
+    content: url("../img/icn/svg/#{$name}.svg")
+    width: #{$width}px
+    height: #{$height}px
+
+.black-splitter
+    height: 1px
+    width: 100%
+    background: $primary-black

@@ -1,0 +1,382 @@
+@import "vars"
+
+// 1640
+@media screen and (max-width: 1640px)
+    .buttons-express
+        gap: 60px
+// 1450
+@media screen and (max-width: 1450px)
+    .buttons-express .express__first-bottom, .buttons-express .express__first-top, .buttons-express .express__second-bottom, .buttons-express .express__second-top, .buttons-express .express__third-bottom, .buttons-express .express__third-top, .buttons-express
+        flex-direction: column-reverse
+    .buttons-express .express__first-bottom__kit, .buttons-express .express__first-top__kit, .buttons-express .express__second-bottom__kit, .buttons-express .express__second-top__kit, .buttons-express .express__third-bottom__kit, .buttons-express .express__third-top__kit, .buttons-express__first, .buttons-express__second, .buttons-express__third
+        flex-direction: row
+// 1400
+@media screen and (max-width: 1400px)
+    .enter-passengers
+        .select_train-side-bg__left, .select_train-side-bg__right
+            display: none
+    .ticket-apply
+        .select_train-side-bg__left, .select_train-side-bg__right
+            display: none
+// 1080
+@media screen and (max-width: 1080px)
+    // header
+    .header_left, .header_right
+        gap: 10px
+    .header_left button
+        font-size: .875rem
+    .header_right-contacts a
+        font-size: .75rem
+    // footer
+    .footer_menu_wrapper ul li .uk-accordion-title
+        font-size: .75rem
+        &::before
+            content: unset
+    .footer_menu_wrapper ul li.uk-open .uk-accordion-title::after, .footer_menu_wrapper ul li .uk-accordion-title::after
+        margin-left: 10px
+    .footer_menu_wrapper ul li .uk-accordion-content ul li a
+        font-size: .75rem
+    .select-place-fixed___footer
+        padding-left: 40px
+        padding-right: 40px
+    .fact-route-modal__content, .popular-route-modal__content
+        flex-direction: column
+    .fact-modal-content__preview img, .route-modal-content__preview img
+        max-width: 100%
+        min-width: 100%
+    .fact-modal-content__info, .route-modal-content__info
+        height: 300px
+// 980
+@media screen and (max-width: 980px)
+    // header
+    .header
+        align-items: center
+        position: relative
+    .header_left
+        display: none
+    .header-burger-btn--open
+        display: block
+        height: 36px
+// 900
+@media screen and (max-width: 900px)
+    // footer
+    .footer
+        padding-left: 30px
+    .footer_logo_wrapper
+        display: none
+// 870
+@media screen and (max-width: 870px)
+    .select_train-side-bg__left, .select_train-side-bg__right
+        display: none
+// 850
+@media screen and (max-width: 850px)
+    // route info header
+    .about_route-header .container .about_route-info
+        justify-content: space-between
+        gap: 10px
+    .about_route-header .container .about_route-date
+        font-size: 1.125rem
+    .about_route-header .container h2
+        font-size: 1.75rem
+    .about_route-header .container .about-route_city span
+        font-size: .75rem
+    .about_route-header .container .about_route-time
+        font-size: 1rem
+    // select vagon
+    .vagon-filters-item__link
+        padding: 6% 23%
+// 770
+@media screen and (max-width: 770px)
+    // enter pass
+    .enter-passengers_info-card
+        background-image: url("../img/enter-pass_mob.svg")
+    .info-card-content__pass-data
+        flex-direction: column
+    .info-card-content__pass-data label
+        flex-basis: unset
+    .info-card-content__splitter .blue-splitter, .card-route_info-splitter .blue-splitter
+        &::before
+            content: url("../img/ticket-splitter_mob.svg")
+    .enter-passengers__policy
+        max-width: 454px
+    .enter-passengers__policy-title, .enter-passengers__policy-text
+        font-size: .75rem
+    .card-route_info__routes
+        gap: 10px
+    .passenger_info__data-time
+        gap: 60px
+// 650
+@media screen and (max-width: 650px)
+    // select service block
+    .main-page .services-content_inputs_elem.first-line
+        flex-direction: column
+        align-items: center
+        row-gap: 12px
+        .text_input-label
+            width: 100%
+    .main-page .services-content_inputs_elem.second-line
+        flex-direction: column
+        row-gap: 16px
+        border-bottom: unset
+        .calendar-inputs
+            padding-bottom: 16px
+            border-bottom: 1px solid #d6d6d6
+    // register page
+    .registration__form
+        &-sfl, &-data, &-contacts
+            flex-direction: column
+            label 
+                max-width: 100%!important
+            .register-mail
+                width: 100%!important
+    .register-reg-btn
+        width: 100%!important
+    .select-place-footer__text
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 6px
+        font-size: .75rem
+    .select-place-fixed___footer
+        padding-top: 10px
+        padding-bottom: 10px
+        align-items: center
+    // profile
+    .profile-personal-data
+        flex-direction: column
+        row-gap: 20px
+// 600
+@media screen and (max-width: 600px)
+    // route info header
+    .about_route-header .container .about_route-pass
+        font-size: .75rem
+    .about_route-header .container .about_route-info
+        justify-content: space-between
+        gap: 10px
+    .about_route-header .container .about_route-date
+        font-size: 1rem
+    .about_route-header .container h2
+        font-size: 1.5rem
+    .about_route-header .container .about-route_city span
+        font-size: .75rem
+    .about_route-header .container .about_route-time
+        font-size: 1rem
+    .select_train-container .select_train-variants-filters .filters-item a
+        font-size: .75rem
+    .select_train-container .select_train-variants-cards .variants-cards_item
+        padding-left: 12px
+        padding-right: 12px
+    .select_train-container .select_train-variants-cards .variants-cards_item .variants-cards_item_route-info .route-info_right .route-info_right-select-link
+        width: 121px
+// 580
+@media screen and (max-width: 580px)
+    // footer
+    footer
+        height: auto
+    .footer
+        flex-direction: column
+        padding-left: 10px
+        row-gap: 10px
+        padding-bottom: 30px
+    .footer_logo_wrapper
+        display: flex
+    .footer_menu_wrapper
+        ul
+            flex-direction: column
+            align-items: center
+            li
+                display: flex
+                flex-direction: column
+                row-gap: 10px
+                max-width: 241px
+                width: 100%
+    .footer_menu_wrapper .uk-accordion li:first-child .uk-accordion-title
+        height: auto
+        width: 100%
+        justify-content: space-between
+    .footer_menu_wrapper ul li .uk-accordion-content
+        margin-top: 0
+        a
+            font-size: .875rem!important
+    .footer_menu_wrapper .uk-accordion li .uk-accordion-title
+        font-size: 1rem
+        width: 100%
+        justify-content: space-between
+    // route info header
+    .select_train-container .select_train-variants-filters .filters-item a
+        font-size: .5rem
+    .about_route-header .container .about-route_city
+        max-width: 116px
+        word-wrap: break-word
+    // select vagon
+    .vagon-filters-item__name
+        font-size: .65rem
+        word-break: break-all
+    .vagon-filters-item__cost, .vagon-filters-item__cost span
+        font-size: .75rem
+    .vagon-filter-container
+        gap: 10px
+    .vagon-filters-item
+        height: 144px
+    .select-place-footer__next
+        width: 200px!important
+// 480
+@media screen and (max-width: 480px)
+    // enter pass
+    .info-card-content__contacts
+        flex-direction: column
+    .card-route_info-splitter, .info-card-content__splitter
+        padding: 0 48px 0 45px
+    .enter-passengers_info
+        top: 100px
+    .enter-passengers_header-title
+        display: none
+// 420 (MOBILE VIEW)
+@media screen and (max-width: 420px)
+    // footer
+    .footer
+        padding-bottom: 130px
+    // header
+    .about_route-header .container
+        width: 95%
+        padding-top: 10px
+    .header
+        box-shadow: unset
+        background: unset
+    .header_right-feedback:not(.burger-menu-feedback)
+        display: none
+    .burger-menu__inner-menu
+        padding-left: 5px
+    // route info header
+    .about_route-header .container .about_route-date
+        font-size: 1rem
+    .about_route-header .container h2
+        font-size: 1.25rem
+    .about_route-header .container .about-route_city span
+        font-size: .5rem
+    .about_route-header .container .about_route-time
+        font-size: 1rem
+    .select_train-container .select_train-variants-filters .filters-item a
+        font-size: .75rem
+    .select_train-container .select_train-variants-filters .filters-item a
+        font-size: .5rem
+        padding-left: 6px
+        padding-right: 6px
+    .select_train-container .select_train-variants-cards .variants-cards_item .variants-cards_item_route-info .route-info_left-text
+        gap: 30px
+    .select_train-container .select_train-variants-cards .variants-cards_item .variants-cards_item_train-info span
+        font-size: .625rem
+    .about_route-header .container .about-route_city
+        max-width: 116px
+        word-wrap: break-word
+    // login page
+    .autorization, .registration
+        min-height: auto
+        height: auto
+    .autorization-header, .register-header, .profile-header
+        .header_right
+            display: none
+    .autorization__wrapper
+        width: 90%
+        .autorization__form
+            width: 100%
+            button
+                width: 100%
+            label
+                width: 100%
+                input
+                    width: 100%
+    // select vagon
+    .vagon-filters-item
+        width: 30%
+    .select_train-container .select_train-variants-filters
+        flex-wrap: wrap
+        justify-content: center
+    .select-place-footer__next
+        font-size: .75rem
+        height: 27px
+        width: 121px!important
+    .select-place-fixed___footer
+        padding: 6px 5px 17px 28px
+    .ticket-apply__card
+        background-image: url("../img/get-ticket_mob.svg")
+    // profile
+    .profile
+        margin-top: 10px
+    .personal-data_main__content, .personal-data_add__content
+        width: 100%
+        padding: 0
+    // mobile footer
+    .mobile-bottom-filed__footer
+        display: flex
+    .fact-modal-content__info, .route-modal-content__info
+        gap: 10px
+        p, b
+            font-size: .875rem
+// 390
+@media screen and (max-width: 390px)
+    // slider
+    .slider-slide-btn
+        display: none
+    .select_train-variants .container
+        width: 95%
+    // header
+    .about_route-header
+        background-image: url("../img/header_mobile_color.png")
+        background-position: bottom
+    // enter pass
+    .card-route_info-splitter, .info-card-content__splitter
+        padding: 0 18px 0 25px
+    .enter-passengers_info-card h2
+        font-size: 1.125rem
+    .card-route_info-splitter span, .info-card-content__splitter span
+        font-size: .75rem
+    .ticket-apply__card
+        padding-left: 14px
+        padding-right: 14px
+    .passenger_info__texts
+        font-size: 1rem
+    .passenger_info__titles
+        font-size: .75rem
+    .ticket-apply__content
+        top: 140px
+    .card-route_info-container
+        .routes-a_way__vokzal, .routes-b_way__vokzal
+            font-size: .5rem
+    // profile
+    .orders-item-info
+        margin-left: 5px
+    .profile-orders__content
+        padding-left: 10px
+        padding-right: 10px
+// 360
+@media screen and (max-width: 360px)
+    // burger
+    .burger-menu__content
+        width: 100%
+    // select service block
+    .main-page .services-content_inputs_elem.second-line div
+        display: flex
+        flex-direction: column
+        row-gap: 20px
+        align-items: center
+        label
+            width: 100%
+            span
+                justify-content: space-between
+    // calendar
+    .ui-datepicker-calendar tbody>tr td:not(.ui-datepicker-other-month)
+        padding: 2px 5px
+        a
+            font-size: .875rem
+    // date input
+    .services-content_inputs_elem.second-line .calendar-inputs
+        label
+            display: none
+// 320
+@media screen and (max-width: 320px)
+    .about_route-header .container .about_route-info
+        gap: 5px
+    .select_train-container .select_train-variants-cards .variants-cards_item .variants-cards_item_route-info .route-info_left-text
+        gap: 10px
+        align-items: baseline

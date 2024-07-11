@@ -1,0 +1,21 @@
+@import "vars"
+
+// header
+.mobile-header
+    display: none
+.mobile-header__container
+    background: $primary-sky
+    padding: 16px 16px 18px 16px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 10px
+.mobile-header__prev-page
+    &::after
+        content: url("../img/icn/svg/arr_prev-w.svg")
+.mobile-header__page-title
+    font-size: 1.25rem
+    color: $primary-white
+    font-weight: 700
+    text-align: center
+    width: 100%

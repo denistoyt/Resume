@@ -1,0 +1,70 @@
+@import "vars"
+
+.header-burger-btn--open
+    display: none
+    &::after
+        content: url("../img/icn/svg/burger.svg")
+.burger-menu
+    display: none
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 4
+    &.active
+        display: block
+    &__fade
+        width: 100%
+        height: 100%
+        background: rgba(0, 0, 0, .45)
+    &__content
+        background: $primary-white
+        position: absolute
+        top: 0
+        left: 0
+        max-width: 379px
+        height: 100%
+        width: 90%
+        padding: 16px 18px 16px 16px
+        display: flex
+        flex-direction: column
+        align-items: end
+        gap: 10px
+.burger-menu--close
+    width: 24px
+    height: 24px
+    &::after
+        content: url("../img/icn/svg/close.svg")
+.burger-menu__inner-menu
+    ul
+        flex-direction: column
+        .uk-accordion-title
+            font-size: 1.375rem!important
+            width: auto!important
+            &::after
+                margin-top: 10px
+                align-self: start
+        .uk-accordion-content
+            a
+                font-size: 1.125rem!important
+.burger-menu__inner
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+.burger-menu__inner-top
+    padding-right: 109px
+.burger-menu__inner-bottom
+    display: flex
+    flex-direction: column
+    row-gap: 10px
+    .header_right-contacts
+        flex-direction: row
+        gap: 20px
+        justify-content: center
+        a
+            font-size: .625rem
+.burger-menu-feedback
+    button
+        width: 100%

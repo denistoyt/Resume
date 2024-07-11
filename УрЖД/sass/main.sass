@@ -1,0 +1,1610 @@
+@import "reset", "global", "fonts", "vars", "functions"
+.fancybox-active
+    height: 100%
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font: 400 16px 'Montserrat', sans-serif 
+    color: $primary-black 
+html, body
+    background: $backround-color
+    font-size: 16px
+    scroll-behavior: smooth
+img
+    object-fit: cover
+    object-position: center
+    width: 100%
+a
+    text-decoration: none
+    color: $primary-black
+ul, li
+    list-style: none
+ul
+    padding-left: 0
+button
+    border: none
+    cursor: pointer
+    background: transparent
+h1,h2,h3,h4,h5,h6
+    margin-bottom: 0
+    font-family: 'Montserrat', sans-serif
+.actions-btn
+    @extend %action-btn-hover
+    &:disabled
+        background: $placeholder-text
+        border-color: $placeholder-stroke
+.error
+    font-size: .75rem
+    font-weight: 500
+    color: $error-color
+.container
+    max-width: 800px
+    width: 90%
+    margin: 0 auto
+// header
+.header
+    background: $primary-white
+    height: 90px
+    box-shadow: $circle-shadow
+    display: flex
+    justify-content: space-between
+    padding: 0 20px
+    &_left
+        display: flex
+        align-items: center
+        gap: 20px
+        button
+            font-size: 1rem
+            font-weight: 500
+            background: transparent
+        &-logo img
+            max-width: 254px
+        &_btn 
+            display: flex
+            align-items: center
+        &-popular_btn::after, &-facts_btn::after
+            content: url("../img/icn/svg/arr-down.svg")
+            height: 16px
+        &_menu
+            padding: 20px
+            top: 90px!important
+            ul
+                display: flex
+                flex-direction: column
+                gap: 13px
+                li
+                    padding-left: 5px
+                    a
+                        color: $text-gray
+                        font-weight: 600
+                        font-size: .875rem
+                        display: flex
+                        align-items: center
+                        gap: 10px
+                        &::before
+                            content: url("../img/icn/svg/map-place-grey.svg")
+                            width: 16px
+                            height: 16px
+                        &:hover
+                            color: $text-gray         
+    &_right
+        display: flex
+        gap: 20px
+        align-items: center
+        &-contacts
+            display: flex
+            flex-direction: column
+            gap: 5px
+            a
+                display: flex
+                gap: 10px
+                font-size: .875rem
+            &-links 
+                display: flex
+                align-items: center
+                gap: 10px
+                &::before
+                    width: 22px
+                    height: 22px
+            &-tel::before
+                content: url("../img/icn/svg/phone.svg")
+            &-mail::before
+                content: url("../img/icn/svg/mail.svg")
+        &-feedback 
+            button
+                @extend %call-btn
+                width: 125px
+            button:hover
+                @extend  %call-btn-hover
+        &-profile a img
+            width: 46px
+            border-radius: 8px
+// footer
+footer 
+    height: 288px
+.footer
+    background: $primary-white
+    box-shadow: $hover-elements
+    border-top-left-radius: 12px
+    border-top-right-radius: 12px
+    display: flex
+    justify-content: space-between
+    padding: 20px 10px 10px 10px
+    height: 100%
+    &_logo_wrapper, &_menu_wrapper, &_feedback_wrapper
+        width: 100%
+        display: flex
+        justify-content: center
+    &_logo_wrapper a img
+        width: 254px
+    &_menu_wrapper
+        .uk-accordion
+            width: 100%
+            li:first-child
+                .uk-accordion-title
+                    height: 45px
+                    width: fit-content
+                .uk-accordion-content
+                    a
+                        &::before
+                            content: url("../img/icn/svg/train-gray_2.svg")
+            li
+                .uk-accordion-title
+                    width: fit-content
+        ul
+            display: flex
+            gap: 10px
+            margin: 0
+            li
+                width: 100%
+                .uk-accordion-content 
+                    margin-top: 10px
+                    padding-left: 5px
+                    ul
+                        display: flex
+                        flex-direction: column
+                        gap: 13px
+                        li a
+                            font-size: .875rem
+                            color: $text-gray
+                            font-weight: 600
+                            display: flex
+                            gap: 10px
+                            &::before
+                                content: url("../img/icn/svg/map-place-grey.svg")
+                                width: 16px
+                                height: 16px
+                            &::after
+                                content: unset
+                .uk-accordion-title
+                    font-size: 1rem
+                    color: $primary-sky
+                    font-weight: 600
+                    display: flex
+                    align-items: center
+                    &::before
+                        width: unset
+                        height: unset
+                    &::after
+                        content: url("../img/icn/svg/arr-down.svg")
+                        width: 16px
+                        height: 16px
+                        margin-left: 20px
+            li.uk-open
+                .uk-accordion-title
+                    &::after
+                        content: url("../img/icn/svg/arr-up.svg")
+                        width: 16px
+                        height: 16px
+                        margin-left: 20px
+    &_feedback
+        &_wrapper
+            flex-direction: column
+            gap: 20px
+            align-items: center
+            justify-content: start
+            .privacy-policy_open
+                font-size: .875rem
+                font-weight: 500
+                color: $primary-sky
+                text-decoration: underline  
+            button
+                @extend %call-btn
+                width: 247px
+                &:hover
+                    @extend %call-btn-hover
+        &_contacts
+            display: flex
+            gap: 22px
+            a
+                font-size: .625rem
+                display: flex
+                align-items: center
+                gap: 10px
+                text-align: right
+                width: fit-content
+                &:first-child::before
+                    content: url("../img/icn/svg/phone_16.svg")
+                    width: 16px
+                    height: 16px
+                &:last-child::before 
+                    content: url("../img/icn/svg/mail_16.svg")
+                    width: 16px
+                    height: 16px
+// index.html
+.main-page
+    @include FlexLayout(column, 20px)
+    padding: 30px 20px 0 20px
+    margin-bottom: 60px
+    #adults-count, #child-count
+        &:focus
+            &::placeholder
+                color: #cacaca
+    .company_slogan *
+        font-size: 1.5rem
+        span
+            font-weight: 500
+    .services
+        @include FlexLayout(column, 17px)
+        justify-content: center
+        align-items: center
+        &-btn
+            @include FlexLayout(column, 9px)
+            align-items: center
+            font-size: .875rem
+            font-weight: 500
+            color: $text-gray
+            span
+                display: flex
+                align-items: center
+                justify-content: center
+                border-radius: 50%
+                background: $primary-white
+                width: 70px
+                height: 70px
+                &::after
+                    content: url("../img/icn/svg/index_train.svg")
+                    width: 39px
+                    height: 39px
+            &.active
+                span
+                    border: 2px solid $primary-sky
+                    box-shadow: $circle-shadow
+                color: $primary-black
+                font-weight: 600
+        &-content
+            display: none
+            text-align: center
+            background: $primary-white
+            border-radius: 12px
+            padding: 15px 15px 26px 15px
+            max-width: 800px
+            width: 100%
+            &.open
+                @include FlexLayout(column, 10px)    
+            h3
+                font-size: 1.125rem
+                font-weight: 700
+                margin-bottom: 10px
+            &_inputs
+                @include TextInputs()
+                &_elem 
+                    padding: 0 5px
+                    &.first-line
+                        margin-top: 10px
+                        display: flex
+                        justify-content: space-between
+                        align-items: end
+                        gap: 47px
+                        div
+                            position: relative
+                            width: 100%
+                            flex: 50%
+                        .route-select-citys__list
+                            z-index: 2
+                            top: 70px
+                            display: none
+                            position: absolute
+                            background: $primary-white
+                            border: 1px solid $placeholder-stroke
+                            border-radius: 6px
+                            padding: 5px
+                            width: 313px
+                            height: 200px
+                            overflow-y: scroll
+                            box-shadow: $circle-shadow
+                            ul
+                                display: flex
+                                flex-direction: column
+                                gap: 5px
+                                li
+                                    padding: 5px
+                                    font-size: .875rem
+                                    border-bottom: 1px solid $placeholder-stroke
+                                    cursor: pointer
+                                    &:hover
+                                        font-weight: 500
+                        label
+                            flex: 50%
+                        button
+                            width: 40px
+                            height: 40px
+                            padding: 8px
+                            border-radius: 50%
+                            background: $primary-sky
+                            transform: rotate(0deg)
+                            transition: transform .65s ease
+                            &:hover
+                                transform: rotate(180deg)
+                            &::before
+                                content: url("../img/icn/svg/ways_swap.svg")
+                                width: 24px
+                                height: 24px
+                    &.second-line
+                        display: flex
+                        gap: 40px
+                        margin: 20px 5px
+                        padding: 16px 0
+                        border-top: 1px solid #D6D6D6
+                        border-bottom: 1px solid #D6D6D6
+                        label [for='route_date']
+                            width: 40px
+                            height: 40px
+                            background: $primary-sky
+                            border-radius: 6px
+                            padding: 8px
+                            &:hover
+                                cursor: pointer
+                            &::before
+                                content: url("../img/icn/svg/calendar.svg")
+                        .calendar-inputs
+                            width: 100%
+                            display: flex
+                            flex-direction: row
+                            align-items: end
+                            gap: 18px
+                            span
+                                width: 100%
+                                @include FlexLayout(column, 9px)
+                                font-size: .875rem
+                                font-weight: 500
+                        div
+                            width: 100%
+                            display: flex
+                            
+                            align-items: end
+                            justify-content: space-between
+                            label
+                                display: flex
+                                span
+                                    display: flex
+                                    gap: 18px
+                                    .button-minus
+                                        padding: 4px 6px
+                                        height: 28px
+                                        background: $primary-white
+                                        box-shadow: $circle-shadow
+                                        border-radius: 6px
+                                        &::before
+                                            content: url("../img/icn/svg/minus.svg")
+                                            width: 20px
+                                            height: 20px
+                                    .button-plus
+                                        padding: 4px 6px
+                                        height: 28px
+                                        background: $primary-sky
+                                        box-shadow: $circle-shadow
+                                        border-radius: 6px
+                                        &::before
+                                            content: url("../img/icn/svg/plus.svg")
+                                            width: 20px
+                                            height: 20px
+                                    input
+                                        height: 28px
+                                        width: 41px
+                                        padding-left: 0
+                                        text-align: center
+                &_search-btn
+                    margin-top: 10px
+                    @extend %action-btn
+                    &:hover
+                        @extend %action-btn-hover
+            &_waytype
+                display: flex
+                justify-content: center
+                .waytype-elems
+                    padding: 10px
+                    font-size: .875rem
+                    width: fit-content
+                .waytype-elem-0
+                    background: $primary-sky
+                    border-top-left-radius: 26px
+                    border-bottom-left-radius: 26px
+                    color: $primary-white
+                    &:hover 
+                        text-decoration: none
+                .waytype-elem-1
+                    background: $placeholder-bg
+                    border-top-right-radius: 26px
+                    border-bottom-right-radius: 26px
+                    color: #867F7F
+                    pointer-events: none
+    .routes-info
+        display: flex
+        flex-direction: column
+        gap: 32px
+        &_popular_routes
+            display: flex
+            flex-direction: column
+            gap: 20px
+            .popular_routes__header
+                display: flex
+                align-items: center
+                justify-content: space-between
+                h2
+                    font-size: 1.375rem
+                    font-weight: 600
+                a
+                    display: flex
+                    align-items: center
+                    color: $primary-sky
+                    font-weight: 600
+                    font-size: .875rem
+                    &::after
+                        display: block
+                        content: url("../img/icn/svg/arr-right.svg")
+                        width: 24px
+                        height: 24px
+                    &:hover
+                        text-decoration: none
+        .popular_routes-wrapper
+            gap: 16px
+        .popular_routes-slide
+            justify-content: space-between
+            height: 290px
+            display: flex
+            flex-direction: column
+            gap: 4px
+            max-width: 210px
+            min-width: 210px
+            border-radius: 12px
+            background: $primary-white
+            padding: 12px
+            .slide-img
+                cursor: pointer
+                img
+                    border-radius: 8px
+                    height: 186px
+            .slide-controls
+                display: flex
+                gap: 14px
+                align-items: center
+                justify-content: space-between
+                span
+                    font-size: 1.125rem
+                    font-weight: 600
+                &_select-city
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    background: rgb(77, 151, 238, .05)
+                    width: 36px
+                    height: 36px
+                    border-radius: 50%
+                    &::before
+                        margin-top: 4px
+                        content: url("../img/icn/svg/arr-enter.svg")
+            .slide-popular-place
+                margin-top: 4px
+                span
+                    display: flex
+                    align-items: center
+                    gap: 6px
+                    font-weight: 600
+                    font-size: .75rem
+                    color: $text-gray
+                    &::before
+                        content: url("../img/icn/svg/map-place.svg")
+        //&_citys_facts
+        &_citys_facts
+            .citys_facts__header
+                display: flex
+                align-items: center
+                justify-content: space-between
+                h2
+                    font-size: 1.375rem
+                    font-weight: 600
+                a
+                    display: flex
+                    align-items: center
+                    gap: 2px
+                    color: $primary-sky
+                    font-size: .875rem
+                    font-weight: 600
+                    &:hover
+                        text-decoration: none
+                    &::after
+                        display: block
+                        content: url("../img/icn/svg/arr-right.svg")
+                        width: 24px
+                        height: 24px
+            .citys_facts-wrapper
+                gap: 20px
+            .slider-slide-btn
+                top: 70px
+            .citys_facts-slide
+                padding: 12px 12px 8px 12px
+                background: $primary-white
+                border-radius: 8px
+                height: 139px
+                max-width: 206px
+                min-width: 206px
+                cursor: pointer
+                .slide-img
+                    position: relative
+                    img
+                        height: 119px
+                        border-radius: 8px
+                    &--fade
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 100%
+                        height: 100%
+                        z-index: 2
+                        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 7.08%, rgba(25, 159, 216, 0.35) 75.83%)
+                        border-radius: 8px
+                .slide-text
+                    position: absolute
+                    bottom: 18px
+                    left: 20px
+                    font-weight: 600
+                    color: $primary-white
+                    z-index: 3
+// login.html
+.autorization
+    min-height: 750px
+    display: flex
+    align-items: center
+    @include TextInputs()
+    &__wrapper
+        max-width: 800px
+        display: flex
+        align-items: center
+        justify-content: center
+        margin: 0 auto
+    .autorization__form
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 10px
+        label
+            margin-top: 10px
+        input
+            width: 318px
+        button
+            width: 322px
+// register.html
+.registration
+    @include TextInputs()
+    height: 750px
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: 160px
+    .wrapper
+        max-width: 800px
+        margin: 0 auto
+        display: flex
+        flex-direction: column
+        gap: 20px
+        align-items: center
+        form
+            width: 100%
+            display: flex
+            flex-direction: column
+            gap: 20px
+            align-items: center
+    .registration__form
+        width: 100%
+        display: flex
+        flex-direction: column
+        gap: 20px
+        .registration__form-sfl, .registration__form-data, .registration__form-contacts, .registration__form-passw
+            display: flex
+            gap: 20px
+            justify-content: center
+            .register-mail
+                width: 318px
+    .text_input-label
+        max-width: 318px   
+        width: 100%
+    .register-born-date-container
+        position: relative
+        display: block
+        .register-date-calend
+            cursor: pointer
+            position: absolute
+            right: 10px
+            top: 8px
+            &::before
+                @include Icns(calendar_sky, 24, 24) 
+    #register-born
+        width: 100%
+        padding-right: 40px
+    .register-reg-btn
+        width: 327px
+// select-train.html
+.select_train-side-bg__left, .select_train-side-bg__right
+    position: fixed
+    bottom: 0
+    z-index: 1
+.select_train-side-bg__left
+    left: 0
+    width: 450px
+    height: 124px
+.select_train-side-bg__right
+    right: 0
+    width: 417px
+    height: 278px
+.select_train-container
+    position: relative
+    .select_train-variants
+        margin-top: 30px
+        &-filters
+            border-top: 1px solid $placeholder-stroke
+            border-bottom: 1px solid $placeholder-stroke      
+            padding: 16px 0
+            display: flex
+            justify-content: space-between
+            .filters-items_show
+                padding: 8px
+                background: $primary-sky
+                border-radius: 6px
+                &::before
+                    display: block
+                    height: 24px
+                    content: url("../img/icn/svg/filter.svg")
+            .filters-item
+                border-radius: 6px
+                background: $primary-white
+                border: 1px solid $placeholder-stroke
+                height: 40px
+                
+                a
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    width: 100%
+                    height: 100%      
+                    padding: 0 15px              
+                    font-size: .875rem
+                    color: $primary-sky
+                    font-weight: 500
+                    &:hover
+                        text-decoration: none
+    .select_train-variants-cards
+        display: flex
+        flex-direction: column
+        row-gap: 16px
+        .variants-cards_item
+            padding: 10px 26px 12px 26px
+            border-radius: 12px
+            border: 1px solid $text-gray
+            display: flex
+            flex-direction: column 
+            gap: 5px
+            background: $primary-white
+            z-index: 2
+            &:hover
+                border: 1px solid $primary-sky
+                .route-info_right-select-link
+                    background: $primary-sky!important
+            &.selected
+                .route-info_right-select-link.active
+                    background: $primary-sky
+            .variants-cards_item_train-info
+                span
+                    display: flex
+                    gap: 10px
+                    align-items: center
+                    font-size: .75rem
+                    font-weight: 500
+                    &::before
+                        width: 24px
+                        height: 24px
+                        display: block
+                        content: url("../img/icn/svg/train-express.svg") 
+            .variants-cards_item_route-info
+                display: flex
+                justify-content: space-between
+                .route-info_left
+                    display: flex
+                    flex-direction: column
+                    gap: 17px
+                    &-text
+                        display: flex
+                        gap: 34px
+                        &_time
+                            margin-top: 11px
+                            margin-bottom: 0
+                            p
+                                font-weight: 600
+                                font-size: 1rem
+                                color: $primary-sky-hover
+                    .text_away-city, .text_bway-city
+                        font-size: 1.125rem
+                        font-weight: 600
+                        margin-bottom: 0
+                    .text_away-time, .text_bway-time
+                        margin-top: 2px
+                        font-size: .875rem
+                        font-weight: 600
+                        margin-bottom: 0
+                    .route-info_left-additions
+                        display: flex
+                        gap: 13px
+                .route-info_right
+                    display: flex
+                    flex-direction: column
+                    gap: 16px
+                    justify-content: end
+                    .route-info_rigt-cost
+                        font-size: 1.625rem
+                        font-weight: 600
+                        margin: 0
+                        text-align: center
+                    .route-info_right-select-link
+                        @extend %btn-inactive
+                        width: 270px
+                        padding: 5px 0
+                        text-align: center
+// select-vagon.html
+.select_vagon-variants-filters
+    gap: 8px
+.vagon-filters-item__icon
+    display: flex
+    justify-content: center
+    &::before
+        display: block
+        width: 42px
+        height: 42px
+        content: url("../img/icn/svg/express-w.svg")
+.vagon-filters-item
+    width: 100%
+    height: 180px
+    border-radius: 6px
+    background: $placeholder-text
+    &__link
+        display: block
+        height: 100%
+        .vagon-filter-container
+            height: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+        padding: 8px 30px
+        &:hover
+            text-decoration: none
+    &__name
+        margin: 0
+        font-size: .875rem
+        font-weight: 700
+        color: $primary-white
+        text-align: center
+    &__cost
+        margin: 0
+        color: $primary-white
+        font-weight: 500
+        font-size: 1rem
+        text-align: center
+        span
+            color: $primary-white
+            font-weight: 500
+            font-size: 1rem
+            text-align: center
+    &.uk-active
+        background: $primary-sky
+    &.disabled
+        background: $text-gray
+        pointer-events: none
+.select_vagon-number
+    font-weight: 500
+    font-size: .75rem
+    margin: 0
+.select_vagon_left-text
+    display: flex
+    gap: 11px
+    align-items: center
+    .select_vagon-places_total, .select_vagon-places_free
+        margin: 0
+        font-size: .75rem
+        font-weight: 500
+        display: flex
+        span
+            font-size: .75rem
+            font-weight: 500
+.select_vagon-info_left
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    .select_vagon_left-text
+        margin-top: 15px
+    .route-info_left-additions
+        display: flex
+        gap: 8px
+// select-place.html
+body:has(.select-place)
+    height: 100vh
+    background: $primary-sky
+.select-place
+    position: relative
+    padding-bottom: 85px
+.select-place__content
+    position: relative
+    margin-bottom: 291px
+.select-place__buttons
+    z-index: 3
+    position: relative
+.select-place-fixed___footer
+    width: 100%
+    position: fixed
+    height: 85px!important
+    position: fixed
+    bottom: 0
+    left: 0
+    padding: 22px 180px
+    background: $primary-white
+    display: flex
+    justify-content: space-between
+    z-index: 3
+.select-place-footer__text
+    margin: 0
+    font-size: 1.375rem
+    font-weight: 500
+    span
+        font-size: 2rem
+        font-weight: 600
+.select-place-footer__next
+    @extend %action-btn-hover
+    width: 327px!important
+.select-place__buttons-container
+    width: fit-content
+    margin: 0 auto
+@import 'vag-places'
+// enter-pass.html
+.enter-passengers
+    position: relative
+.enter-passengers_about-route
+    position: relative
+    background: url("../img/header_color.png") center / cover no-repeat  
+    .container
+        padding-top: 20px
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        margin: 0 auto
+        height: 232px
+        .enter-passengers_header-title
+            color: $primary-white
+            font-size: 2rem
+            font-weight: 600
+.enter-passengers_info
+    position: absolute
+    top: 160px
+    width: 100%
+    .container
+        display: flex
+        flex-direction: column
+        gap: 12px
+        align-items: center
+.enter-passengers_info-card
+    background: url('../img/enter-pass.svg') center / cover no-repeat
+    display: flex
+    flex-direction: column
+    gap: 12px
+    padding: 12px 23px 27px 17px
+    border-radius: 12px
+    h2
+        font-size: 1.5rem
+        font-weight: 500
+        text-align: center
+.enter-passengers_info-card-content
+    display: flex
+    flex-direction: column
+    gap: 15px
+.info-card-content__pass-data, .info-card-content__contacts
+    @include TextInputs()
+    .text_input-label
+        font-size: .75rem
+        font-weight: 500
+        input
+            background: $placeholder-bg
+.info-card-content__pass-data
+    display: flex
+    column-gap: 10px
+    row-gap: 12px
+    justify-content: center
+    flex-wrap: wrap
+    label
+        flex-basis: 246px
+.info-card-content__contacts
+    display: flex
+    gap: 10px
+    label
+        font-size: .75rem
+        font-weight: 500
+        width: 100%
+.info-card-content__splitter, .card-route_info-splitter
+    padding: 0 68px 0 65px
+    margin-bottom: 12px
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    span
+        display: block
+        height: fit-content
+        background: $primary-white
+        z-index: 2
+        font-weight: 500
+        padding: 0 7px
+    .blue-splitter
+        top: -4px
+        position: absolute
+        display: block
+        &::before
+            
+            content: url("../img/ticket-splitter.svg")
+.enter-passengers__next-btn, .ticket-apply__next-btn
+    @extend %action-btn-hover
+    padding: 9px 0
+    max-width: 327px
+    &:hover
+        @extend %action-btn
+.enter-passengers__next-btn
+    margin-bottom: 120px
+.enter-passengers__policy
+    display: flex
+    flex-direction: column
+    gap: 9px
+    margin-top: 18px
+.enter-passengers__policy-title
+    font-size: 1.125rem
+    font-weight: 500
+.enter-passengers__policy-text
+    font-weight: 500
+    color: $text-gray
+// ticket-apply.html
+.ticket-apply__card
+    height: 642px
+    background: url("../img/get-ticket.svg") center / cover no-repeat
+    padding: 12px 34px 17px 34px
+    border-radius: 12px
+.ticket-apply__content
+    position: absolute
+    top: 250px
+    width: 100%
+    padding-bottom: 56px
+    .container
+        display: flex
+        flex-direction: column
+        gap: 12px
+.ticket-apply__card-route_info
+    display: flex
+    flex-direction: column
+    gap: 12px
+.card-route_info-splitter
+    margin-top: 29px
+    margin-bottom: 43px
+.card-route_info-container
+    display: flex
+    flex-direction: column
+    gap: 2px
+.card-route_info__adds
+    display: flex
+    gap: 8px
+    margin-top: 13px
+    align-items: end
+.info__adds-passengers
+    display: flex
+    align-items: end
+    margin-right: 2px
+    font-size: .875rem
+    font-weight: 600
+.card-route_info__routes
+    display: flex
+    justify-content: space-between
+    align-items: center
+.card-route_info__date
+    font-weight: 600
+    text-align: center
+    margin: 0
+.routes-a_way__city, .routes-b_way__city
+    font-weight: 700
+    font-size: 1.75rem
+    margin-bottom: 5px
+.routes-a_way__vokzal, .routes-b_way__vokzal
+    font-size: .75rem
+.info__routes-time
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 4px
+    .about_route-time
+        font-weight: 600
+        margin: 0
+.passenger_info__titles
+    font-size: .875rem
+    color: $text-gray
+    margin: 0
+.passenger_info__texts
+    font-size: 1.125rem
+    font-weight: 600
+    margin-top: 4px
+    margin-bottom: 0
+.card-passenger_info-container
+    display: flex
+    flex-direction: column
+    gap: 10px
+.card-passenger_info__data
+    display: flex
+    flex-direction: column
+    gap: 8px
+    padding-right: 150px
+.passenger_info__data-time
+    display: flex
+    justify-content: space-between
+.card-route_info-splitter
+    margin-bottom: 15px
+.ticket-apply__next-btn
+    margin: 0 auto
+// about route header
+.about_route-header
+        background: url("../img/header_color.png") center / cover no-repeat  
+        .container
+            padding-top: 20px
+            display: flex
+            flex-direction: column
+            gap: 9px
+            margin: 0 auto
+            height: auto
+            padding-bottom: 40px
+            *
+                color: $primary-white
+            .about_route-info
+                display: flex
+                gap: 60px      
+            .about_route-date
+                text-align: center
+                font-size: 1.25rem
+                font-weight: 600
+                margin-bottom: 0!important
+            h2
+                font-size: 2rem
+                font-weight: 700
+                word-wrap: break-word
+            .about-route_city
+                display: flex
+                flex-direction: column
+                gap: 9px
+                span
+                    font-size: .875rem
+                    word-wrap: break-word
+            .about_route-time
+                font-size: 1.125rem
+                font-weight: 600
+                margin: 0
+            .about_route-text
+                display: flex
+                flex-direction: column
+                gap: 17px
+                align-items: center
+            .about_route-pass
+                display: flex
+                align-items: center
+                font-size: 1rem
+                font-weight: 600
+                &::before
+                    content: url("../img/icn/svg/passenger.svg")
+// profile
+.profile
+    min-height: 694px
+    height: 100%
+    margin-top: 140px
+    margin-bottom: 140px
+    h1
+        font-size: 1.25rem
+        font-weight: 500
+    .container
+        display: flex
+        flex-direction: column
+        row-gap: 20px
+        align-items: center
+.profile-personal-data
+    width: 100%
+    padding-bottom: 20px
+    display: flex
+    justify-content: space-between
+    h2 
+        font-size: 1rem
+        font-weight: 500
+        color: $placeholder-stroke
+    p
+        font-size: .875rem
+        margin: 0
+.profile-personal-data_main, .prifile-personal-data_add
+    display: flex
+    flex-direction: column
+    gap: 10px
+    align-items: center
+.personal-data_main__content, .personal-data_add__content
+    display: flex
+    flex-direction: column
+    gap: 10px
+    padding: 0 65px
+    p
+        display: flex
+        gap: 8px
+.profile-orders
+    width: 100%
+    align-items: center
+    display: flex
+    flex-direction: column 
+    gap: 20px
+    h3
+        font-size: 1.25rem
+        font-weight: 500
+.profile-orders__content
+    max-width: 356px
+    width: 100%
+    padding: 20px 20px 20px 16px
+    border-radius: 5px
+    background: $primary-white
+    box-shadow: $circle-shadow
+    height: 458px
+    overflow-y: scroll
+    display: flex
+    flex-direction: column 
+    gap: 10px
+.orders__content-item
+    border-radius: 5px
+    padding: 10px
+    background: $primary-sky
+    box-shadow: $circle-shadow
+    display: flex
+    justify-content: end
+    align-items: center
+    p, span
+        margin: 0
+        color: $primary-white
+        font-weight: 500
+    .order-date
+        font-size: .75rem
+    .order-route-a, .order-route-b
+        display: flex
+        gap: 5px
+.orders-item-date
+    margin-left: 5px
+.orders-item-route
+    display: flex
+    flex-direction: column
+    gap: 12px
+    align-items: center
+    width: 100%
+.orders-item-info
+    border-radius: 6px
+    padding: 3px 15px
+    border: 1px solid $primary-white
+    height: min-content
+    color: $primary-white
+    font-size: .75rem
+    font-weight: 500
+    margin-left: 20px
+    &:hover
+        border-color: $primary-sky
+        color: $primary-sky
+        background: $primary-white
+// slider
+.slider-slide-btn
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 43px
+    height: 43px
+    border-radius: 50%
+    background: $primary-white
+    box-shadow: $circle-shadow
+
+.slider-slide-next  
+    right: 0
+    top: 104px
+    &::after
+        display: flex
+        align-items: center
+        width: 25px
+        height: 25px
+        margin-bottom: 6px
+        content: url("../img/icn/svg/slide-next.svg")
+.slider-slide-prev   
+    left: 0
+    top: 104px
+    &::after
+        display: flex
+        align-items: center
+        width: 25px
+        height: 25px
+        margin-bottom: 6px
+        content: url("../img/icn/svg/slide-prev.svg")
+
+// icons
+.icn_wifi
+    &::before
+        @include Icns(wifi, 24, 24)
+.icn_usb
+    &::before
+        @include Icns(usb, 24, 24)
+.icn_conditioner
+    &::before
+        @include Icns(conditioner, 24, 24)
+.icn_bio-wc
+    &::before
+        @include Icns(bio_wc, 24, 24)
+.icn_passenger
+    &::before
+        @include Icns(passenger_b, 24, 24)
+.icn-user
+    &::before
+        @include Icns(user-b-16, 16, 16)
+.icn-date
+    &::before
+        @include Icns(calendar-b-16, 16, 16)
+.icn-city
+    &::before
+        @include Icns(place-b-16, 16, 16)
+.icn-tel
+    &::before
+        @include Icns(tel-b-16, 16, 16)
+.icn-mail
+    &::before
+        @include Icns(mail-b-16, 16, 16)
+.icn-passp
+    &::before
+        @include Icns(passp-b-16, 16, 16)
+.icn-place-w
+    &::before
+        @include Icns(place-w-12, 12, 12)
+.icn-map-place
+    &::before
+        @include Icns(map-place, 16, 16)
+.select-services_mobile-btn
+    padding: 10px
+    border-radius: 12px
+    background: $primary-sky
+    &::before
+        content: url("../img/icn/svg/home.svg")
+.index-footer
+    justify-content: space-between!important
+.mobile-bottom-filed__footer
+    display: none
+    width: 100%
+    height: 85px
+    position: fixed
+    bottom: 0
+    background: $primary-white
+    align-items: center
+    justify-content: center
+    padding: 0 27px
+    .mobile-bottom-home
+        border-radius: 12px
+        padding: 10px
+        background: $primary-sky
+        box-shadow: 0 4px 4px rgba(0, 0, 0, .15)
+        width: fit-content
+        &::before 
+            @include Icns(home, 24, 24)
+    .mobile-bottom-profile
+        padding: 10px
+        width: fit-content
+        &::before 
+            @include Icns(profile-g-24, 24, 24)
+// datepicker styles
+@import "datepicker"
+
+// fancybox modals
+.fancy-modal-container
+    .fancybox-bg
+        opacity: .5
+.autorize-modal
+    display: none
+    position: absolute
+    top: 80px
+    right: 20px
+    width: 245px
+    backround: $primary-white
+    padding: 10px 0
+    border-top-left-radius: 26px
+    border-bottom-left-radius: 26px
+    border-bottom-right-radius: 26px
+    a
+        font-size: .875rem
+        font-weight: 500
+    .wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        gap: 8px
+        .black-splitter
+            width: 209px
+
+.feedback-modal
+    width: 100%
+    max-width: 600px
+    display: none
+    padding: 0
+    border-radius: 12px
+    .wrapper
+        form
+            background: $primary-white
+            padding: 10px 10px 20px 10px
+            display: flex
+            flex-direction: column
+            gap: 10px
+    &__header
+        display: flex
+        h5
+            font-size: 1rem
+            font-weight: 500
+            width: 100%
+            text-align: center
+.feedback-modal__content-form
+    @include TextInputs()
+    display: flex
+    flex-direction: column
+    gap: 10px
+.feedback-modal__send
+    @extend %action-btn-hover
+.modal-close
+    &::before
+        content: url("../img/icn/svg/close.svg")
+.privacy-policy-modal--open
+    text-decoration: underline
+    text-underline-offset: 3px
+    font-weight: 500
+.fb-modal-priv-check
+    cursor: pointer
+    font-weight: 500
+    input
+        display: none
+    &:has(input:checked)
+        &::before
+            content: url("../img/icn/svg/check-checked.svg")
+    &::before
+        content: url("../img/icn/svg/check-uncheck.svg")
+.privacy-policy-modal__container
+    display: none
+    max-width: 390px
+    width: 100%
+    max-height: 890px
+    overflow-y: scroll
+    padding: 40px 18px 40px 16px
+    .privacy-policy-modal__header
+        display: flex
+        h5
+            width: 100%
+            text-align: center
+            font-weight: 500
+    .privacy-policy-modal__content
+        display: flex
+        flex-direction: column
+        gap: 10px
+        p
+            margin: 0
+            font-size: .75rem
+            line-height: 150%
+.order-confirm-modal__container
+    max-width: 330px
+    border-radius: 12px
+    padding: 25px 36px
+    background: $primary-white
+    display: none
+.order-confirm-modal__content
+    display: flex
+    flex-direction: column
+    padding-top: 12px
+    gap: 24px
+    align-items: center
+    text-align: center
+.order-confirm-modal__ticket
+    margin-bottom: 4px
+    &::before
+        content: url("../img/icn/svg/order-ticket-apply.svg")
+.order-confirm-modal__ok
+    @extend %action-btn-hover
+    width: fit-content
+    padding: 8px 37px
+.order-confirm-modal__text
+    font-weight: 600
+.popular-route-modal__container
+    padding: 10px 16px 20px 16px
+    border-radius: 12px
+    background: $primary-white
+    max-width: 1068px
+    width: 90%
+    flex-direction: column
+    gap: 20px
+.fact-route-modal__container
+    padding: 10px 16px 20px 16px
+    border-radius: 12px
+    background: $primary-white
+    max-width: 1330px
+    width: 90%
+    flex-direction: column
+    gap: 20px
+.popular-route-modal__header, .fact-route-modal__header
+    margin-bottom: 10px
+    display: flex
+    justify-content: space-between
+    p
+        width: 100%
+        margin: 0
+        text-align: center
+        font-size: 1.25rem
+        font-weight: 600
+.fact-modal-header__city span
+    font-size: 1.25rem
+    font-weight: 600
+.popular-route-modal__content, .fact-route-modal__content
+    display: flex
+    gap: 10px
+.route-modal-content__preview, .fact-modal-content__preview
+    display: flex
+    flex-direction: column
+    gap: 8px
+    img
+        max-width: 684px
+        min-width: 684px
+        max-height: 402px
+.route-modal-place
+    color: $text-gray
+    font-size: 1rem
+    font-weight: 700
+    display: flex
+    gap: 6px
+    margin: 0
+.route-modal-content__info, .fact-modal-content__info
+    display: flex
+    flex-direction: column
+    gap: 20px
+    max-height: 390px
+    width: 100%
+    overflow-y: scroll
+    b
+        font-weight: 500
+    p
+        margin: 0
+.profile-order-modal__container
+    max-width: 350px
+    width: 90%
+    padding: 10px
+    border-radius: 10px
+    box-shadow: $circle-shadow
+    background: $primary-white
+    *
+        font-size: .875rem
+.profile-order-modal__header
+    display: flex
+    justify-content: end
+    margin-bottom: 10px
+.profile-order-modal__content-top
+    display: flex
+    flex-direction: column
+    gap: 30px
+    justify-content: center
+    text-align: center
+.profile-order-modal-date
+    margin: 0
+    font-weight: 600
+.profile-order-modal-route_time
+    display: flex
+    padding: 0 20px
+    flex-direction: column
+    gap: 20px
+.order-modal-route__container, .order-modal-time__container
+    display: flex
+    justify-content: space-between
+    div
+        display: flex
+        flex-direction: column
+        gap: 8px 
+        p
+            margin: 0
+            font-weight: 600
+.route-modal__splitter
+    height: 1px
+    width: 100%
+    background: rgba(77, 151, 238, .5)
+    margin: 10px 0
+.profile-order-modal__content-bottom
+    display: flex
+    flex-direction: column
+    gap: 20px
+    align-items: center
+.profile-order-modal_train-vag
+    width: 100%
+    display: flex
+    justify-content: space-between
+    div
+        display: flex
+        flex-direction: column
+        gap: 8px
+        align-items: center
+        text-align: center
+        p
+            margin: 0
+            font-weight: 600
+.order-modal-train, .order-modal-vagon
+    flex-basis: 50%
+.profile-order-modal_place
+    display: flex
+    flex-direction: column
+    gap: 8px
+    align-items: center
+    text-align: center
+    p
+        font-weight: 600
+        margin: 0
+.order-modal-print_btn
+    margin-top: 30px
+    @extend %action-btn-hover
+    &:hover
+        @extend %action-btn
+.vag-express
+    &::before
+        width: 24px
+        height: 24px
+        content: url("../img/icn/svg/express-w_24.svg")
+.vag-plats
+    &::before
+        width: 24px
+        height: 24px
+        content: url("../img/icn/svg/plats-w_24.svg")
+.vag-coupe
+    &::before
+        width: 24px
+        height: 24px
+        content: url("../img/icn/svg/coupe-w_24.svg")
+.vag-sv
+    &::before
+        width: 24px
+        height: 24px
+        content: url("../img/icn/svg/sv-w_24.svg")
+.vag-double
+    &::before
+        width: 24px
+        height: 24px
+        content: url("../img/icn/svg/double-w_24.svg")
+// scroll
+::-webkit-scrollbar 
+    width: 4px
+    height: 8px
+    background-color: transparent
+    padding: 4px
+
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb 
+    background-color: $placeholder-stroke
+    border-radius: 20px
+    height: 80px
+    padding: 4px
+
+
+// media
+@import "burger", "mobile", "media"

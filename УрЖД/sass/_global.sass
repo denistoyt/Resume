@@ -1,0 +1,18 @@
+@import "vars"
+
+input
+    &::placeholder
+        color: $placeholder-text
+        font-weight: 400
+        font-size: .75rem
+button, textarea, input
+    &:focus-visible
+        outline: none!important
+#ui-datepicker-div
+    display: none
+input.validate-error, textarea.validate-error
+    border: 1px solid rgba(255, 44, 44, .3)!important
+.validate-error
+    color: $error-color
+    font-size: .75rem
+    font-weight: 500

@@ -1,0 +1,45 @@
+@import "vars", "functions"
+
+// place btn styles
+// if free
+.select-place__select-btn
+    font-size: .625rem
+    color: $primary-white
+    font-weight: 500
+    //padding: 18px 15px
+    border-radius: 5px
+    border: 1px solid $primary-sky
+    background: $free-seat
+    width: 45px
+    height: 48px
+    &:hover
+        text-decoration: underline
+    // if taken
+    &.taken
+        background: $placeholder-text
+        pointer-events: none
+    // if selected
+    &.selected
+        background: $secondary-sky
+
+// align container
+.buttons-express
+    display: flex
+    gap: 160px
+    justify-content: center
+    padding: 20px 30px
+    border-radius: 20px
+    border: 4px solid $placeholder-stroke
+    background: $placeholder-bg
+    &__first, &__second, &__third
+        display: flex
+        flex-direction: column
+        gap: 57px
+    .express__first-top, .express__second-top, .express__third-top,.express__first-bottom, .express__second-bottom, .express__third-bottom
+        display: flex
+        gap: 27px
+    .express__first-top__kit, .express__second-top__kit, .express__third-top__kit, .express__first-bottom__kit, .express__second-bottom__kit, .express__third-bottom__kit
+        width: min-content
+        display: flex
+        flex-direction: column
+        gap: 4px

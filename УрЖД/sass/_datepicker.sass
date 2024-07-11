@@ -1,0 +1,52 @@
+@import "vars"
+
+#ui-datepicker-div
+    background: $primary-white
+    padding: 20px 10px 10px
+    box-shadow: $circle-shadow
+    border-radius: 6px
+.ui-datepicker-next
+    margin-left: 10px
+.ui-datepicker-next, .ui-datepicker-prev
+    span 
+        font-weight: 500
+.ui-datepicker-title
+    margin-top: 10px
+    padding: 5px
+    border-radius: 12px
+    background: $primary-sky
+    text-align: center
+    span
+        color: $primary-white
+        font-weight: 500
+        font-size: .875rem
+.ui-datepicker-calendar
+    margin-top: 10px
+    display: flex
+    flex-direction: column
+    gap: 10px
+    tbody
+        display: flex
+        flex-direction: column
+        gap: 10px
+    tbody > tr
+        display: flex
+        justify-content: space-between
+        column-gap: 10px
+        td:not(.ui-datepicker-other-month)
+            padding: 5px 10px
+            background: $placeholder-stroke
+            border-radius: 6px
+    thead > tr
+        display: flex
+        justify-content: space-between
+        th
+            padding: 5px
+            border-radius: 6px
+            span
+                font-size: .75rem
+                font-weight: 500
+            &:nth-child(odd)
+                background: $primary-sky
+                span
+                    color: $primary-white
